@@ -14,8 +14,8 @@
 }
 
 + (TrackHelper*) sharedInstance;
-
-- (NSInteger) getUnlockedNumberOfTracks;
+- (NSArray*) getTracks;
+- (NSInteger) getNumberOfTracks;
 - (void) updateTracksArrayForUnlockedStatus;
 
 @end

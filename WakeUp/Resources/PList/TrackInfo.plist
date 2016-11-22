@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>Tracks</key>
+	<array>
+		<dict>
+			<key>Filename</key>
+			<string>Day of Gifts.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>Day of Gifts.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+	</array>
+</dict>
+</plist>

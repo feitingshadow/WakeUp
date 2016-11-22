@@ -7,6 +7,7 @@
 //
 
 #import "SimpleTrackListTableVC.h"
+#import "SimpleListCell.h"
 #import "TrackHelper.h"
 #import "Settings.h"
 
@@ -32,25 +33,14 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-//    switch (section) {
-//        case 0:
-            return [[TrackHelper sharedInstance] getUnlockedNumberOfTracks];
-//            break;
-//        case 1:
-//            break;
-//            return [[TrackHelper sharedInstance] getTotalNumberOfTracks] - [[TrackHelper sharedInstance] getUnlockedNumberOfTracks];
-//        default:
-//            break;
-//    }
-//    return 0;
+            return [[TrackHelper sharedInstance] getNumberOfTracks];
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+    SimpleListCell *cell = [tableView dequeueReusableCellWithIdentifier:@"SimpleListCell" forIndexPath:indexPath];
+    [cell setupWithTrack:(MeditationTrack*)[[TrackHelper sharedInstance] getTracks][indexPath.row]];
     return cell;
 }
 

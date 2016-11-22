@@ -7,7 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "MeditationTrack.h"
 
 @interface SimpleListCell : UITableViewCell
 
+@property (nonatomic, weak) IBOutlet UILabel * nameLabel;
+@property (nonatomic, weak) IBOutlet UILabel * lengthLabel;
+@property (nonatomic, weak) IBOutlet UILabel * descriptionLabel;
+
+- (void) setupWithTrack:(MeditationTrack*)track;
 @end

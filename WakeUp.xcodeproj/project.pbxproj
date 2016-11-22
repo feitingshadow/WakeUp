@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD3500651DE4B72100654352 /* WakeUpTests.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500641DE4B72100654352 /* WakeUpTests.m */; };
 		BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6C1DE35CEA00C12C81 /* main.m */; };
 		BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */; };
 		BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F721DE35CEA00C12C81 /* ViewController.m */; };
@@ -24,9 +25,24 @@
 		BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FA01DE3809B00C12C81 /* TrackHelper.m */; };
 		BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */; };
 		BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */; };
+		BDC32FB21DE3F0B200C12C81 /* MeditationTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FB11DE3F0B200C12C81 /* MeditationTrack.m */; };
+		BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC32FB41DE3F88900C12C81 /* TrackInfo.plist */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		BD3500671DE4B72100654352 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BDC32F601DE35CE900C12C81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BDC32F671DE35CE900C12C81;
+			remoteInfo = WakeUp;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
+		BD3500621DE4B72100654352 /* WakeUpTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WakeUpTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD3500641DE4B72100654352 /* WakeUpTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WakeUpTests.m; sourceTree = "<group>"; };
+		BD3500661DE4B72100654352 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -59,9 +75,19 @@
 		BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Day of Gifts.mp3"; sourceTree = "<group>"; };
 		BDC32FAC1DE3EEC300C12C81 /* SimpleListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleListCell.h; sourceTree = "<group>"; };
 		BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleListCell.m; sourceTree = "<group>"; };
+		BDC32FB01DE3F0B200C12C81 /* MeditationTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeditationTrack.h; sourceTree = "<group>"; };
+		BDC32FB11DE3F0B200C12C81 /* MeditationTrack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MeditationTrack.m; sourceTree = "<group>"; };
+		BDC32FB41DE3F88900C12C81 /* TrackInfo.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TrackInfo.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		BD35005F1DE4B72100654352 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC32F651DE35CE900C12C81 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -72,10 +98,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		BD3500631DE4B72100654352 /* WakeUpTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD3500641DE4B72100654352 /* WakeUpTests.m */,
+				BD3500661DE4B72100654352 /* Info.plist */,
+			);
+			path = WakeUpTests;
+			sourceTree = "<group>";
+		};
 		BDC32F5F1DE35CE900C12C81 = {
 			isa = PBXGroup;
 			children = (
 				BDC32F6A1DE35CEA00C12C81 /* WakeUp */,
+				BD3500631DE4B72100654352 /* WakeUpTests */,
 				BDC32F691DE35CEA00C12C81 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -84,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				BDC32F681DE35CEA00C12C81 /* WakeUp.app */,
+				BD3500621DE4B72100654352 /* WakeUpTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -91,18 +128,19 @@
 		BDC32F6A1DE35CEA00C12C81 /* WakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32FAF1DE3F09600C12C81 /* DataModel */,
 				BDC32FA31DE3851900C12C81 /* Resources */,
 				BDC32F831DE3629800C12C81 /* Views */,
 				BDC32F881DE362EC00C12C81 /* Helpers */,
 				BDC32F821DE3628A00C12C81 /* ViewControllers */,
 				BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */,
 				BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */,
+				BDC32FA21DE3835B00C12C81 /* AppConstants.h */,
 				BDC32F741DE35CEA00C12C81 /* Main.storyboard */,
 				BDC32F771DE35CEA00C12C81 /* Assets.xcassets */,
 				BDC32F791DE35CEA00C12C81 /* LaunchScreen.storyboard */,
 				BDC32F7C1DE35CEA00C12C81 /* Info.plist */,
 				BDC32F6B1DE35CEA00C12C81 /* Supporting Files */,
-				BDC32FA21DE3835B00C12C81 /* AppConstants.h */,
 			);
 			path = WakeUp;
 			sourceTree = "<group>";
@@ -162,6 +200,7 @@
 		BDC32FA31DE3851900C12C81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32FB31DE3F87500C12C81 /* PList */,
 				BDC32FA41DE3851900C12C81 /* Audio */,
 				BDC32FA61DE3851900C12C81 /* HTML */,
 				BDC32FA71DE3851900C12C81 /* Image */,
@@ -222,9 +261,44 @@
 			name = InfoSelection;
 			sourceTree = "<group>";
 		};
+		BDC32FAF1DE3F09600C12C81 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32FB01DE3F0B200C12C81 /* MeditationTrack.h */,
+				BDC32FB11DE3F0B200C12C81 /* MeditationTrack.m */,
+			);
+			name = DataModel;
+			sourceTree = "<group>";
+		};
+		BDC32FB31DE3F87500C12C81 /* PList */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32FB41DE3F88900C12C81 /* TrackInfo.plist */,
+			);
+			path = PList;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		BD3500611DE4B72100654352 /* WakeUpTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD35006B1DE4B72100654352 /* Build configuration list for PBXNativeTarget "WakeUpTests" */;
+			buildPhases = (
+				BD35005E1DE4B72100654352 /* Sources */,
+				BD35005F1DE4B72100654352 /* Frameworks */,
+				BD3500601DE4B72100654352 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD3500681DE4B72100654352 /* PBXTargetDependency */,
+			);
+			name = WakeUpTests;
+			productName = WakeUpTests;
+			productReference = BD3500621DE4B72100654352 /* WakeUpTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		BDC32F671DE35CE900C12C81 /* WakeUp */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = BDC32F7F1DE35CEA00C12C81 /* Build configuration list for PBXNativeTarget "WakeUp" */;
@@ -251,6 +325,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = Nazca;
 				TargetAttributes = {
+					BD3500611DE4B72100654352 = {
+						CreatedOnToolsVersion = 8.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = BDC32F671DE35CE900C12C81;
+					};
 					BDC32F671DE35CE900C12C81 = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -271,11 +350,19 @@
 			projectRoot = "";
 			targets = (
 				BDC32F671DE35CE900C12C81 /* WakeUp */,
+				BD3500611DE4B72100654352 /* WakeUpTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		BD3500601DE4B72100654352 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC32F661DE35CE900C12C81 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -283,6 +370,7 @@
 				BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */,
 				BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */,
 				BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */,
+				BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */,
 				BDC32F761DE35CEA00C12C81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -290,6 +378,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		BD35005E1DE4B72100654352 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD3500651DE4B72100654352 /* WakeUpTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		BDC32F641DE35CE900C12C81 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -301,6 +397,7 @@
 				BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */,
 				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,
 				BDC32F871DE362CA00C12C81 /* Settings.m in Sources */,
+				BDC32FB21DE3F0B200C12C81 /* MeditationTrack.m in Sources */,
 				BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */,
 				BDC32F8E1DE3636200C12C81 /* GradientView.m in Sources */,
 				BDC32F981DE3685200C12C81 /* InfoPageVC.m in Sources */,
@@ -311,6 +408,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD3500681DE4B72100654352 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BDC32F671DE35CE900C12C81 /* WakeUp */;
+			targetProxy = BD3500671DE4B72100654352 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		BDC32F741DE35CEA00C12C81 /* Main.storyboard */ = {
@@ -332,6 +437,30 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		BD3500691DE4B72100654352 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WakeUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fightingshadowgames.WakeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeUp.app/WakeUp";
+			};
+			name = Debug;
+		};
+		BD35006A1DE4B72100654352 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = WakeUpTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.fightingshadowgames.WakeUpTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WakeUp.app/WakeUp";
+			};
+			name = Release;
+		};
 		BDC32F7D1DE35CEA00C12C81 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -445,6 +574,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		BD35006B1DE4B72100654352 /* Build configuration list for PBXNativeTarget "WakeUpTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD3500691DE4B72100654352 /* Debug */,
+				BD35006A1DE4B72100654352 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		BDC32F631DE35CE900C12C81 /* Build configuration list for PBXProject "WakeUp" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -461,6 +598,7 @@
 				BDC32F811DE35CEA00C12C81 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

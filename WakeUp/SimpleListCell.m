@@ -21,4 +21,12 @@
     // Configure the view for the selected state
 }
 
+#pragma Mark - Custom Functions - Setup
+- (void) setupWithTrack:(MeditationTrack*)track;
+{
+    self.nameLabel.text = track.trackName;
+    self.lengthLabel .text = [track lengthInStringFormat]; //this is a good example of when to use KVO/data binding.
+    self.descriptionLabel.text = track.description;
+}
+
 @end
