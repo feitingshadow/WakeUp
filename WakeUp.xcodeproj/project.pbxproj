@@ -13,6 +13,17 @@
 		BDC32F761DE35CEA00C12C81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F741DE35CEA00C12C81 /* Main.storyboard */; };
 		BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F771DE35CEA00C12C81 /* Assets.xcassets */; };
 		BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BDC32F791DE35CEA00C12C81 /* LaunchScreen.storyboard */; };
+		BDC32F871DE362CA00C12C81 /* Settings.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F861DE362CA00C12C81 /* Settings.m */; };
+		BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F8A1DE3631B00C12C81 /* AudioMgr.m */; };
+		BDC32F8E1DE3636200C12C81 /* GradientView.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F8D1DE3636200C12C81 /* GradientView.m */; };
+		BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F901DE367EA00C12C81 /* SimpleTrackListTableVC.m */; };
+		BDC32F941DE3680500C12C81 /* AlarmListTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F931DE3680500C12C81 /* AlarmListTableVC.m */; };
+		BDC32F981DE3685200C12C81 /* InfoPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F971DE3685200C12C81 /* InfoPageVC.m */; };
+		BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F9A1DE3693200C12C81 /* WakeUpMakeAlarmVC.m */; };
+		BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F9D1DE3697500C12C81 /* AlarmTrackSelectTableVC.m */; };
+		BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FA01DE3809B00C12C81 /* TrackHelper.m */; };
+		BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */; };
+		BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +37,28 @@
 		BDC32F771DE35CEA00C12C81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BDC32F7A1DE35CEA00C12C81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BDC32F7C1DE35CEA00C12C81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BDC32F851DE362CA00C12C81 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		BDC32F861DE362CA00C12C81 /* Settings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Settings.m; sourceTree = "<group>"; };
+		BDC32F891DE3631B00C12C81 /* AudioMgr.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AudioMgr.h; sourceTree = "<group>"; };
+		BDC32F8A1DE3631B00C12C81 /* AudioMgr.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AudioMgr.m; sourceTree = "<group>"; };
+		BDC32F8C1DE3636200C12C81 /* GradientView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GradientView.h; sourceTree = "<group>"; };
+		BDC32F8D1DE3636200C12C81 /* GradientView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GradientView.m; sourceTree = "<group>"; };
+		BDC32F8F1DE367EA00C12C81 /* SimpleTrackListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTrackListTableVC.h; sourceTree = "<group>"; };
+		BDC32F901DE367EA00C12C81 /* SimpleTrackListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTrackListTableVC.m; sourceTree = "<group>"; };
+		BDC32F921DE3680500C12C81 /* AlarmListTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmListTableVC.h; sourceTree = "<group>"; };
+		BDC32F931DE3680500C12C81 /* AlarmListTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmListTableVC.m; sourceTree = "<group>"; };
+		BDC32F961DE3685200C12C81 /* InfoPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoPageVC.h; sourceTree = "<group>"; };
+		BDC32F971DE3685200C12C81 /* InfoPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoPageVC.m; sourceTree = "<group>"; };
+		BDC32F991DE3693200C12C81 /* WakeUpMakeAlarmVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WakeUpMakeAlarmVC.h; sourceTree = "<group>"; };
+		BDC32F9A1DE3693200C12C81 /* WakeUpMakeAlarmVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WakeUpMakeAlarmVC.m; sourceTree = "<group>"; };
+		BDC32F9C1DE3697500C12C81 /* AlarmTrackSelectTableVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmTrackSelectTableVC.h; sourceTree = "<group>"; };
+		BDC32F9D1DE3697500C12C81 /* AlarmTrackSelectTableVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmTrackSelectTableVC.m; sourceTree = "<group>"; };
+		BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackHelper.h; sourceTree = "<group>"; };
+		BDC32FA01DE3809B00C12C81 /* TrackHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackHelper.m; sourceTree = "<group>"; };
+		BDC32FA21DE3835B00C12C81 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
+		BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Day of Gifts.mp3"; sourceTree = "<group>"; };
+		BDC32FAC1DE3EEC300C12C81 /* SimpleListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleListCell.h; sourceTree = "<group>"; };
+		BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleListCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,15 +91,18 @@
 		BDC32F6A1DE35CEA00C12C81 /* WakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				BDC32FA31DE3851900C12C81 /* Resources */,
+				BDC32F831DE3629800C12C81 /* Views */,
+				BDC32F881DE362EC00C12C81 /* Helpers */,
+				BDC32F821DE3628A00C12C81 /* ViewControllers */,
 				BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */,
 				BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */,
-				BDC32F711DE35CEA00C12C81 /* ViewController.h */,
-				BDC32F721DE35CEA00C12C81 /* ViewController.m */,
 				BDC32F741DE35CEA00C12C81 /* Main.storyboard */,
 				BDC32F771DE35CEA00C12C81 /* Assets.xcassets */,
 				BDC32F791DE35CEA00C12C81 /* LaunchScreen.storyboard */,
 				BDC32F7C1DE35CEA00C12C81 /* Info.plist */,
 				BDC32F6B1DE35CEA00C12C81 /* Supporting Files */,
+				BDC32FA21DE3835B00C12C81 /* AppConstants.h */,
 			);
 			path = WakeUp;
 			sourceTree = "<group>";
@@ -77,6 +113,113 @@
 				BDC32F6C1DE35CEA00C12C81 /* main.m */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		BDC32F821DE3628A00C12C81 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F711DE35CEA00C12C81 /* ViewController.h */,
+				BDC32F721DE35CEA00C12C81 /* ViewController.m */,
+				BDC32FA91DE3859900C12C81 /* TrackSelector */,
+				BDC32FAA1DE385B600C12C81 /* AlarmList */,
+				BDC32FAB1DE385C900C12C81 /* InfoSelection */,
+			);
+			name = ViewControllers;
+			sourceTree = "<group>";
+		};
+		BDC32F831DE3629800C12C81 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F951DE3680D00C12C81 /* Cells */,
+				BDC32F8C1DE3636200C12C81 /* GradientView.h */,
+				BDC32F8D1DE3636200C12C81 /* GradientView.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BDC32F881DE362EC00C12C81 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F891DE3631B00C12C81 /* AudioMgr.h */,
+				BDC32F8A1DE3631B00C12C81 /* AudioMgr.m */,
+				BDC32F851DE362CA00C12C81 /* Settings.h */,
+				BDC32F861DE362CA00C12C81 /* Settings.m */,
+				BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */,
+				BDC32FA01DE3809B00C12C81 /* TrackHelper.m */,
+			);
+			name = Helpers;
+			sourceTree = "<group>";
+		};
+		BDC32F951DE3680D00C12C81 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32FAC1DE3EEC300C12C81 /* SimpleListCell.h */,
+				BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */,
+			);
+			name = Cells;
+			sourceTree = "<group>";
+		};
+		BDC32FA31DE3851900C12C81 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32FA41DE3851900C12C81 /* Audio */,
+				BDC32FA61DE3851900C12C81 /* HTML */,
+				BDC32FA71DE3851900C12C81 /* Image */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		BDC32FA41DE3851900C12C81 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		BDC32FA61DE3851900C12C81 /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		BDC32FA71DE3851900C12C81 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		BDC32FA91DE3859900C12C81 /* TrackSelector */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F8F1DE367EA00C12C81 /* SimpleTrackListTableVC.h */,
+				BDC32F901DE367EA00C12C81 /* SimpleTrackListTableVC.m */,
+			);
+			name = TrackSelector;
+			sourceTree = "<group>";
+		};
+		BDC32FAA1DE385B600C12C81 /* AlarmList */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F921DE3680500C12C81 /* AlarmListTableVC.h */,
+				BDC32F931DE3680500C12C81 /* AlarmListTableVC.m */,
+				BDC32F991DE3693200C12C81 /* WakeUpMakeAlarmVC.h */,
+				BDC32F9A1DE3693200C12C81 /* WakeUpMakeAlarmVC.m */,
+				BDC32F9C1DE3697500C12C81 /* AlarmTrackSelectTableVC.h */,
+				BDC32F9D1DE3697500C12C81 /* AlarmTrackSelectTableVC.m */,
+			);
+			name = AlarmList;
+			sourceTree = "<group>";
+		};
+		BDC32FAB1DE385C900C12C81 /* InfoSelection */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F961DE3685200C12C81 /* InfoPageVC.h */,
+				BDC32F971DE3685200C12C81 /* InfoPageVC.m */,
+			);
+			name = InfoSelection;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -139,6 +282,7 @@
 			files = (
 				BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */,
 				BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */,
+				BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */,
 				BDC32F761DE35CEA00C12C81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -151,8 +295,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */,
+				BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */,
+				BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */,
+				BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */,
 				BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */,
+				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,
+				BDC32F871DE362CA00C12C81 /* Settings.m in Sources */,
+				BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */,
+				BDC32F8E1DE3636200C12C81 /* GradientView.m in Sources */,
+				BDC32F981DE3685200C12C81 /* InfoPageVC.m in Sources */,
+				BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */,
 				BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */,
+				BDC32F941DE3680500C12C81 /* AlarmListTableVC.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
