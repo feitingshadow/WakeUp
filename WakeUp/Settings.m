@@ -7,8 +7,17 @@
 //
 
 #import "Settings.h"
+#import "AppConstants.h"
 
 @implementation Settings
+
++(id) userDefaultsObjectForKey:(NSString*)k defaultingTo:(id)objectIfNil {
+    id obj = [[NSUserDefaults standardUserDefaults] objectForKey:k];
+    if(obj == nil) {
+        obj = objectIfNil;
+    }
+    return obj;
+}
 
 + (BOOL) getDidUnlockTracks;
 {
@@ -19,6 +28,19 @@
 {
     if(unlocked) {
         //Implement
+    }
+}
+
++ (NSMutableArray*) getAllAlarms;
+{
+    return [self userDefaultsObjectForKey:KEY_ALARMS defaultingTo:[NSMutableArray array]];
+//    return (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:KEY_ALARMS];
+}
+
++ (void) setAllAlarms:(NSMutableArray*)alarmArray;
+{
+    if(alarmArray != nil) {
+        [[NSUserDefaults standardUserDefaults] setObject:alarmArray forKey:KEY_ALARMS];
     }
 }
 @end

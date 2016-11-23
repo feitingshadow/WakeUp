@@ -21,5 +21,10 @@ static NSDateFormatter * dateFormatter = nil;
     return [dateFormatter stringFromDate:date];
 }
 
++ (NSString *)amPmString:(NSDate *)date {
+    dateFormatter.dateFormat = @"a";
+    return [dateFormatter stringFromDate:date];
+}
+
 
 @end

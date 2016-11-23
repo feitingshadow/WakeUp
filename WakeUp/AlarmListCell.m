@@ -24,16 +24,22 @@
     // Configure the view for the selected state
 }
 
-/* timeLabel;
- daysTurnedOnLabe
- nameLabel;
- alarmOnSwitch;*/
-
 - (void)setupWithAlarm:(Alarm *)alarm {
-    self.timeLabel.text = [DateUtility hoursAndMinutesForDate:alarm.time];
-    self.alarmOnSwitch.on = alarm.active;
-    self.nameLabel.text = [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex].trackName;
-    self.daysTurnedOnLabel.text = [self getStringOfDaysForAlarm:alarm];
+    self.alarm = alarm;
+    [self updateView];
+}
+
+- (void) updateView {
+    self.timeLabel.text = [DateUtility hoursAndMinutesForDate:self.alarm.time];
+    self.dayMeridianLabel.text = [DateUtility amPmString:self.alarm.time];
+    self.alarmOnSwitch.on = self.alarm.active;
+    self.nameLabel.text = [[TrackHelper sharedInstance] trackAt:self.alarm.meditationTrackIndex].trackName;
+    self.daysTurnedOnLabel.text = [self getStringOfDaysForAlarm:self.alarm];
+}
+
+- (IBAction)alarmSwitchWasChanged:(UISwitch*)alarmSwitch;
+{
+    self.alarm.active = alarmSwitch.on;
 }
 
 - (NSString*) getStringOfDaysForAlarm: (Alarm*) alarm {
@@ -46,8 +52,6 @@
         }
     }
     NSString * string = [days componentsJoinedByString:@", "];
-//    for(int i = 0; i < days.count - 1; i++) {
-//    }
     return string;
 }
 

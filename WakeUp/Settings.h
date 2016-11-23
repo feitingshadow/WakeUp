@@ -13,6 +13,9 @@
     
 }
 
++ (NSMutableArray*) getAllAlarms;
++ (void) setAllAlarms:(NSMutableArray*)alarmArray;
+
 + (BOOL) getDidUnlockTracks;
 + (void) setDidUnlockTracks:(BOOL) unlocked;
 

@@ -10,6 +10,16 @@
 #define AppConstants_h
 
 /**********************
+ SETTINGS
+ *********************/
+#define KEY_ALARMS @"Alarm"
+
+/**********************
+ NOTIFICATIONS
+ *********************/
+#define NOTE_ALARMS_UPDATE @"UpdateAlarm"
+
+/**********************
  TRACK FILE NAME/NAMES
  *********************/
 #define TRACK_1_NAME @"Track 1 Name"

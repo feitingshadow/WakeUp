@@ -13,6 +13,7 @@
 		BD3500731DE4EE3D00654352 /* AlarmListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500721DE4EE3D00654352 /* AlarmListCell.m */; };
 		BD3500761DE4EE6100654352 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500751DE4EE6100654352 /* Alarm.m */; };
 		BD3500791DE50C3000654352 /* DateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500781DE50C3000654352 /* DateUtility.m */; };
+		BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35007D1DE54C3C00654352 /* AlarmController.m */; };
 		BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6C1DE35CEA00C12C81 /* main.m */; };
 		BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */; };
 		BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F721DE35CEA00C12C81 /* ViewController.m */; };
@@ -56,6 +57,8 @@
 		BD3500751DE4EE6100654352 /* Alarm.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Alarm.m; sourceTree = "<group>"; };
 		BD3500771DE50C3000654352 /* DateUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DateUtility.h; sourceTree = "<group>"; };
 		BD3500781DE50C3000654352 /* DateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtility.m; sourceTree = "<group>"; };
+		BD35007C1DE54C3C00654352 /* AlarmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
+		BD35007D1DE54C3C00654352 /* AlarmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -131,6 +134,19 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		BD35007B1DE54C1D00654352 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				BDC32F851DE362CA00C12C81 /* Settings.h */,
+				BDC32F861DE362CA00C12C81 /* Settings.m */,
+				BD35007C1DE54C3C00654352 /* AlarmController.h */,
+				BD35007D1DE54C3C00654352 /* AlarmController.m */,
+				BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */,
+				BDC32FA01DE3809B00C12C81 /* TrackHelper.m */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
 		BDC32F5F1DE35CE900C12C81 = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +169,7 @@
 		BDC32F6A1DE35CEA00C12C81 /* WakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				BD35007B1DE54C1D00654352 /* Controllers */,
 				BDC32FAF1DE3F09600C12C81 /* DataModel */,
 				BDC32FA31DE3851900C12C81 /* Resources */,
 				BDC32F831DE3629800C12C81 /* Views */,
@@ -205,10 +222,6 @@
 			children = (
 				BDC32F891DE3631B00C12C81 /* AudioMgr.h */,
 				BDC32F8A1DE3631B00C12C81 /* AudioMgr.m */,
-				BDC32F851DE362CA00C12C81 /* Settings.h */,
-				BDC32F861DE362CA00C12C81 /* Settings.m */,
-				BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */,
-				BDC32FA01DE3809B00C12C81 /* TrackHelper.m */,
 				BD3500771DE50C3000654352 /* DateUtility.h */,
 				BD3500781DE50C3000654352 /* DateUtility.m */,
 			);
@@ -429,6 +442,7 @@
 				BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */,
 				BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */,
 				BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */,
+				BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */,
 				BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */,
 				BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */,
 				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,

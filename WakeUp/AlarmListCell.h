@@ -15,9 +15,13 @@
 }
 
 @property (nonatomic, weak) IBOutlet UILabel * timeLabel;
+@property (nonatomic, weak) IBOutlet UILabel * dayMeridianLabel; //(am)
 @property (nonatomic, weak) IBOutlet UILabel * daysTurnedOnLabel;
 @property (nonatomic, weak) IBOutlet UILabel * nameLabel;
 @property (nonatomic, weak) IBOutlet UISwitch * alarmOnSwitch;
+@property (nonatomic, strong) Alarm * alarm;
+
+- (IBAction)alarmSwitchWasChanged:(UISwitch*)alarmSwitch;
 
 - (void) setupWithAlarm:(Alarm*) alarm;
 
