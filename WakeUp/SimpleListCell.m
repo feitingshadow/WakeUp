@@ -26,7 +26,7 @@
 {
     self.nameLabel.text = track.trackName;
     self.lengthLabel .text = [track lengthInStringFormat]; //this is a good example of when to use KVO/data binding.
-    self.descriptionLabel.text = track.description;
+    self.descriptionLabel.text = track.trackDescription;
 }
 
 @end

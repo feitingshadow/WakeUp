@@ -10,15 +10,23 @@
 #import "SimpleListCell.h"
 #import "TrackHelper.h"
 #import "Settings.h"
+#import "AudioMgr.h"
 
-@interface SimpleTrackListTableVC ()
-
+@interface SimpleTrackListTableVC () {
+    int lastSelectedRow;
+}
 @end
 
 @implementation SimpleTrackListTableVC
 
 - (void)viewDidLoad {
+    lastSelectedRow = -1;
     [super viewDidLoad];
+}
+
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[AudioMgr sharedInstance] stopTrack];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,7 +52,17 @@
     return cell;
 }
 
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if(lastSelectedRow != indexPath.row) {
+        AudioMgr * audioMgr = [AudioMgr sharedInstance];
+        [audioMgr stopTrack];
+        MeditationTrack * medTrack = (MeditationTrack*)[[TrackHelper sharedInstance] getTracks][indexPath.row];
+        [audioMgr setNextTrack:medTrack.fileURL];
+        [audioMgr playTrack];
+    }
+    lastSelectedRow = indexPath.row;
+}
 
 // Override to support conditional editing of the table view.
 - (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {

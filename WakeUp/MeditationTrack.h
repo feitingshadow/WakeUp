@@ -15,6 +15,7 @@
 @property (nonatomic, copy) NSString * trackDescription;
 @property (nonatomic, copy) NSString * fileName;
 @property (nonatomic, copy, readonly) NSString * filePath;
+@property (nonatomic, copy, readonly) NSURL * fileURL;
 
 @property (nonatomic, readonly) CGFloat lengthInSeconds;
 

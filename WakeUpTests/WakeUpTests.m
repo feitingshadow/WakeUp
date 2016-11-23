@@ -8,6 +8,7 @@
 
 #import <XCTest/XCTest.h>
 #import "TrackHelper.h"
+#import "MeditationTrack.h"
 
 @interface WakeUpTests : XCTestCase
 
@@ -26,14 +27,20 @@
 }
 
 - (void) testCanLoadTracks {
-    XCTAssert( ([[TrackHelper sharedInstance] getTracks].count > 0), @"Can't load tracks");
+    XCTAssert( ([[TrackHelper sharedInstance] getTracks].count > 0));
 }
 
-//- (void)testPerformanceExample {
-//    // This is an example of a performance test case.
-//    [self measureBlock:^{
-//        // Put the code you want to measure the time of here.
-//    }];
-//}
+- (void) testLoadLengthOfTrack {
+    MeditationTrack * track = [[TrackHelper sharedInstance] getTracks][0];
+    XCTAssert( track.lengthInSeconds > 0);
+}
+
+- (void)testTrackLoadTime {
+    // This is an example of a performance test case.
+    [TrackHelper sharedInstance] ; //loads all tracks.
+    [self measureBlock:^{
+        [[TrackHelper sharedInstance] reloadTracks]; //loads all tracks.
+    }];
+}
 
 @end

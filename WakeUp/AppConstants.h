@@ -21,6 +21,15 @@
 /**********************
  TIME CONSTANTS
  *********************/
-#define SECONDS_PER_MINUTE 60
+#define SECONDS_PER_MINUTE  60
+#define DAYS_PER_WEEK       7
+
+#define DATE_INDEX_SUNDAY       0
+#define DATE_INDEX_MONDAY       1
+#define DATE_INDEX_TUESDAY      2
+#define DATE_INDEX_WEDNESDAY    3
+#define DATE_INDEX_THURSDAY     4
+#define DATE_INDEX_FRIDAY       5
+#define DATE_INDEX_SATURDAY     6
 
 #endif /* AppConstants_h */

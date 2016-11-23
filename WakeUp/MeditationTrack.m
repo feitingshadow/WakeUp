@@ -8,9 +8,11 @@
 
 #import "MeditationTrack.h"
 #import "AppConstants.h"
+#import "AudioMgr.h"
 
 @interface MeditationTrack()
 @property (nonatomic, copy) NSString * filePath;
+@property (nonatomic, copy) NSURL * fileURL;
 @end
 
 @implementation MeditationTrack
@@ -22,7 +24,9 @@
         self.fileName = fileName; self.trackName = trackName;
         self.trackDescription = description;
         self.filePath = [[NSBundle mainBundle] pathForResource:fileName ofType:@""];
-        _lengthInSeconds = 0; //todo, load the file or its metadata.
+        self.fileURL = [NSURL fileURLWithPath:self.filePath isDirectory:NO];
+        _lengthInSeconds = [AudioMgr getLengthOfAudioFileFromURL:self.fileURL];
+//        _lengthInSeconds = 0; //todo, load the file or its metadata.
     }
     return self;
 }

@@ -17,10 +17,8 @@
 #define KEY_TRACKDESCRIPTION @"Description"
 
 @interface TrackHelper()
-@property (strong, nonatomic) NSMutableArray * trackFileNames;
-//@property (strong, nonatomic) NSArray * unlockedTrackFileNames;
-@property (strong, nonatomic) NSDictionary * trackNameDictionary;
-@property (strong, nonatomic) NSMutableArray * meditationTracks;
+@property (strong, nonatomic) NSMutableArray * trackFileNames; //unlocked tracks
+@property (strong, nonatomic) NSMutableArray * meditationTracks; // all tracks
 
 @end
 
@@ -45,13 +43,13 @@
     [self initializeTracks];
     
     [self updateTracksArrayForUnlockedStatus];
-    self.trackNameDictionary = @{TRACK_1_NAME:TRACK_1_FILENAME, UNL_TRACK_1_NAME:UNL_TRACK_1_FILENAME}; //and so on and so on.
 }
 
-- (void) initializeTracks {
+
+- (void) reloadTracks {
     NSDictionary * trackDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TrackInfo" ofType:@"plist"]];
     if(trackDictionary != nil) {
-         NSArray * tracks = trackDictionary[@"Tracks"];
+        NSArray * tracks = trackDictionary[@"Tracks"];
         self.meditationTracks = [NSMutableArray arrayWithCapacity:tracks.count];
         NSDictionary * individualDict = nil;
         MeditationTrack * medTrack = nil;
@@ -69,22 +67,17 @@
                 medTrack = [[MeditationTrack alloc] initWithFileName:tempFileName trackname:tempMeditationName descr:tempDescription];
                 [self.meditationTracks addObject:medTrack];
             }
-            else {
+            else { //Unit tests take care of these, erase.
                 NSLog(@"One key is nil for track %i in %@, %@, %@", i, tempMeditationName, tempFileName, tempDescription );
             }
         }
     } else {
         NSLog(@"Didn't get trackDictionary from path");
     }
-    
 }
-- (NSString*) infoForTrack:(int)trackNumber;
-{
-    NSString * fileName = @"";
-    NSString * name = @"";
-    NSString * description = @"";
-   
-    return description;
+
+- (void) initializeTracks {
+    [self reloadTracks];
 }
 
 - (NSInteger) getNumberOfTracks;
@@ -94,10 +87,21 @@
 
 
 - (void) updateTracksArrayForUnlockedStatus {
-    self.trackFileNames = [[NSMutableArray alloc] initWithArray:@[TRACK_1_NAME]];
+//    self.trackFileNames = [[NSMutableArray alloc] initWithArray:@[TRACK_1_NAME]];
     
     if( [Settings getDidUnlockTracks] == YES) {
         [self.trackFileNames addObjectsFromArray:@[UNL_TRACK_1_NAME] ];
     }
 }
+
+- (void) unloadAllTracks; //To test the load Speed
+{
+    self.meditationTracks = nil;
+}
+
+- (MeditationTrack*) trackAt:(int)index;
+{
+    return self.meditationTracks[index];
+}
+
 @end
