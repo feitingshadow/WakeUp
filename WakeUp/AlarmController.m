@@ -33,10 +33,31 @@
     return self.alarms;
 }
 
+
+- (Alarm*) getAlarmAtIndex:(int)index;
+{
+    return self.alarms[index];
+}
+
+- (void) addAlarm:(Alarm*)alarm;
+{
+    [self.alarms addObject:alarm];
+    [self save];
+}
+
 - (void) saveAlarm: (Alarm*)alarm atIndex:(int)i;
 {
     [self.alarms replaceObjectAtIndex:i withObject:alarm];
     [self save];
+}
+
+- (BOOL) saveAlarmForEditing:(Alarm*)alarm; {
+    NSInteger index =[self.alarms indexOfObject:alarm];
+    if(index != NSNotFound) {
+        [self saveAlarm:alarm atIndex:index];
+        return YES;
+    }
+    return NO;
 }
 
 - (BOOL) deleteAlarm:(Alarm*)alarm; {

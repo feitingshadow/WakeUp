@@ -14,6 +14,16 @@
 		BD3500761DE4EE6100654352 /* Alarm.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500751DE4EE6100654352 /* Alarm.m */; };
 		BD3500791DE50C3000654352 /* DateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500781DE50C3000654352 /* DateUtility.m */; };
 		BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35007D1DE54C3C00654352 /* AlarmController.m */; };
+		BD3500811DE6520300654352 /* MultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500801DE6520300654352 /* MultiSelectView.m */; };
+		BDABFC551DE73D1700282A04 /* AlarmButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */; };
+		BDABFC561DE73D1800282A04 /* AlarmButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */; };
+		BDABFC571DE73D1800282A04 /* InfoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC511DE73D1700282A04 /* InfoButton@2x.png */; };
+		BDABFC581DE73D1800282A04 /* InfoButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC521DE73D1700282A04 /* InfoButton@3x.png */; };
+		BDABFC591DE73D1800282A04 /* MusicButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC531DE73D1700282A04 /* MusicButton@2x.png */; };
+		BDABFC5A1DE73D1800282A04 /* MusicButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC541DE73D1700282A04 /* MusicButton@3x.png */; };
+		BDABFC5D1DE8BC2300282A04 /* AlarmChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */; };
+		BDABFC601DE9523600282A04 /* MultiSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */; };
+		BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */; };
 		BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6C1DE35CEA00C12C81 /* main.m */; };
 		BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */; };
 		BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F721DE35CEA00C12C81 /* ViewController.m */; };
@@ -59,6 +69,19 @@
 		BD3500781DE50C3000654352 /* DateUtility.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DateUtility.m; sourceTree = "<group>"; };
 		BD35007C1DE54C3C00654352 /* AlarmController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmController.h; sourceTree = "<group>"; };
 		BD35007D1DE54C3C00654352 /* AlarmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
+		BD35007F1DE6520300654352 /* MultiSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectView.h; sourceTree = "<group>"; };
+		BD3500801DE6520300654352 /* MultiSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectView.m; sourceTree = "<group>"; };
+		BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@2x.png"; sourceTree = "<group>"; };
+		BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@3x.png"; sourceTree = "<group>"; };
+		BDABFC511DE73D1700282A04 /* InfoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@2x.png"; sourceTree = "<group>"; };
+		BDABFC521DE73D1700282A04 /* InfoButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@3x.png"; sourceTree = "<group>"; };
+		BDABFC531DE73D1700282A04 /* MusicButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@2x.png"; sourceTree = "<group>"; };
+		BDABFC541DE73D1700282A04 /* MusicButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@3x.png"; sourceTree = "<group>"; };
+		BDABFC5B1DE8BC2300282A04 /* AlarmChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmChooseCell.h; sourceTree = "<group>"; };
+		BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmChooseCell.m; sourceTree = "<group>"; };
+		BDABFC5E1DE9523600282A04 /* MultiSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectButton.h; sourceTree = "<group>"; };
+		BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectButton.m; sourceTree = "<group>"; };
+		BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectButton.xib; sourceTree = "<group>"; };
 		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -213,6 +236,11 @@
 				BDC32F951DE3680D00C12C81 /* Cells */,
 				BDC32F8C1DE3636200C12C81 /* GradientView.h */,
 				BDC32F8D1DE3636200C12C81 /* GradientView.m */,
+				BD35007F1DE6520300654352 /* MultiSelectView.h */,
+				BD3500801DE6520300654352 /* MultiSelectView.m */,
+				BDABFC5E1DE9523600282A04 /* MultiSelectButton.h */,
+				BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */,
+				BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -235,6 +263,8 @@
 				BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */,
 				BD3500711DE4EE3D00654352 /* AlarmListCell.h */,
 				BD3500721DE4EE3D00654352 /* AlarmListCell.m */,
+				BDABFC5B1DE8BC2300282A04 /* AlarmChooseCell.h */,
+				BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */,
 			);
 			name = Cells;
 			sourceTree = "<group>";
@@ -268,6 +298,12 @@
 		BDC32FA71DE3851900C12C81 /* Image */ = {
 			isa = PBXGroup;
 			children = (
+				BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */,
+				BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */,
+				BDABFC511DE73D1700282A04 /* InfoButton@2x.png */,
+				BDABFC521DE73D1700282A04 /* InfoButton@3x.png */,
+				BDABFC531DE73D1700282A04 /* MusicButton@2x.png */,
+				BDABFC541DE73D1700282A04 /* MusicButton@3x.png */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -416,10 +452,17 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDABFC551DE73D1700282A04 /* AlarmButton@2x.png in Resources */,
+				BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */,
 				BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */,
 				BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */,
 				BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */,
 				BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */,
+				BDABFC561DE73D1800282A04 /* AlarmButton@3x.png in Resources */,
+				BDABFC571DE73D1800282A04 /* InfoButton@2x.png in Resources */,
+				BDABFC581DE73D1800282A04 /* InfoButton@3x.png in Resources */,
+				BDABFC5A1DE73D1800282A04 /* MusicButton@3x.png in Resources */,
+				BDABFC591DE73D1800282A04 /* MusicButton@2x.png in Resources */,
 				BDC32F761DE35CEA00C12C81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -439,11 +482,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD3500811DE6520300654352 /* MultiSelectView.m in Sources */,
 				BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */,
 				BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */,
 				BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */,
 				BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */,
 				BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */,
+				BDABFC5D1DE8BC2300282A04 /* AlarmChooseCell.m in Sources */,
 				BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */,
 				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,
 				BDC32F871DE362CA00C12C81 /* Settings.m in Sources */,
@@ -451,6 +496,7 @@
 				BD3500791DE50C3000654352 /* DateUtility.m in Sources */,
 				BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */,
 				BDC32F8E1DE3636200C12C81 /* GradientView.m in Sources */,
+				BDABFC601DE9523600282A04 /* MultiSelectButton.m in Sources */,
 				BDC32F981DE3685200C12C81 /* InfoPageVC.m in Sources */,
 				BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */,
 				BD3500731DE4EE3D00654352 /* AlarmListCell.m in Sources */,
@@ -634,6 +680,7 @@
 				BD35006A1DE4B72100654352 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BDC32F631DE35CE900C12C81 /* Build configuration list for PBXProject "WakeUp" */ = {
 			isa = XCConfigurationList;

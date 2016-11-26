@@ -18,6 +18,9 @@
 @property (nonatomic, strong) NSDate * time;
 
 - (instancetype) initWithTime:(NSDate*)time trackIndex:(int)meditationIndex;
++ (instancetype) alarm;
++ (instancetype) alarmWithHour:(int)hr minutes:(int)minutes;
++ (instancetype) alarmWithHour:(int)hr minutes:(int)minutes trackIndex:(int)index;
 
 - (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn;
 - (BOOL) getDayOfWeekIsOn:(int)dayOfWeek;

@@ -7,7 +7,22 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Alarm.h"
+#import "MultiSelectView.h"
 
-@interface WakeUpMakeAlarmVC : UIViewController
+@interface WakeUpMakeAlarmVC : UIViewController <MultiSelectViewDelegate>
+{
+    
+}
+
+@property (nonatomic, weak) IBOutlet MultiSelectView * weekdaySelectView;
+@property (nonatomic, weak) IBOutlet UILabel * trackTitleLabel;
+@property (nonatomic, weak) IBOutlet UILabel * trackDescriptionLabel;
+
+@property (nonatomic, assign) BOOL editingAlarm; //creating if NO
+
+- (void) setupWithAlarm:(Alarm*) alarm;
+
+- (IBAction) saveTapped;
 
 @end

@@ -9,11 +9,14 @@
 #import "DateUtility.h"
 
 static NSDateFormatter * dateFormatter = nil;
+static NSDateComponents * dateComponents = nil;
 
 @implementation DateUtility
 
 + (void) initialize {
     dateFormatter = [[NSDateFormatter alloc] init];
+    dateComponents = [[NSDateComponents alloc] init]; //be sure to manually reset any reused component
+
 }
 
 + (NSString *)hoursAndMinutesForDate:(NSDate *)date {
@@ -26,5 +29,11 @@ static NSDateFormatter * dateFormatter = nil;
     return [dateFormatter stringFromDate:date];
 }
 
++ (NSDate*) dateWithHour:(int)hour andMinutes:(int)min {
+    dateComponents.hour = hour;
+    dateComponents.minute = min;
+    NSCalendar *calendar = [NSCalendar currentCalendar];
+    return [calendar dateFromComponents:dateComponents];
+}
 
 @end

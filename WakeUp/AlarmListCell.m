@@ -10,6 +10,7 @@
 #import "TrackHelper.h"
 #import "AppConstants.h"
 #import "DateUtility.h"
+#import "AlarmController.h"
 
 @implementation AlarmListCell
 
@@ -53,6 +54,10 @@
     }
     NSString * string = [days componentsJoinedByString:@", "];
     return string;
+}
+
+- (void) saveAlarm; {
+    [[AlarmController sharedInstance] saveAlarmForEditing:self.alarm];
 }
 
 @end

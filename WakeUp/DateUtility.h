@@ -12,5 +12,6 @@
 
 + (NSString*) hoursAndMinutesForDate:(NSDate*)date;
 + (NSString *)amPmString:(NSDate *)date;
++ (NSDate*) dateWithHour:(int)hour andMinutes:(int)min;
 
 @end

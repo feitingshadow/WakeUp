@@ -19,4 +19,7 @@
 + (BOOL) getDidUnlockTracks;
 + (void) setDidUnlockTracks:(BOOL) unlocked;
 
++ (int) getLastStoredTrackIndex;
++ (void) setLastStoredTrackIndex:(int)ind;
+
 @end

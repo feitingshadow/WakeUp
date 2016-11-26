@@ -13,6 +13,7 @@
  SETTINGS
  *********************/
 #define KEY_ALARMS @"Alarm"
+#define KEY_LAST_SELECTED_INDEX @"LastSelIndex"
 
 /**********************
  NOTIFICATIONS

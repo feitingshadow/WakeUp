@@ -14,6 +14,8 @@
 @property (nonatomic, weak) IBOutlet UILabel * nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel * lengthLabel;
 @property (nonatomic, weak) IBOutlet UILabel * descriptionLabel;
+@property (nonatomic, weak) IBOutlet UIButton * pausePlayButton;
+@property (nonatomic, weak) IBOutlet UISlider * trackProgressSlider;
 
 - (void) setupWithTrack:(MeditationTrack*)track;
 @end

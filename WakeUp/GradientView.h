@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface GradientView : UIView
+IB_DESIGNABLE
+@interface GradientView : UIView //Simple top-down gradient
+@property (nonatomic, strong) IBInspectable UIColor * toColor;
+@property (nonatomic, strong) IBInspectable UIColor * fromColor;
 
 @end

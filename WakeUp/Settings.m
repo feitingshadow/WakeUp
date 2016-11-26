@@ -33,14 +33,27 @@
 
 + (NSMutableArray*) getAllAlarms;
 {
-    return [self userDefaultsObjectForKey:KEY_ALARMS defaultingTo:[NSMutableArray array]];
-//    return (NSMutableArray*)[[NSUserDefaults standardUserDefaults] objectForKey:KEY_ALARMS];
+    NSData * data = [self userDefaultsObjectForKey:KEY_ALARMS defaultingTo:nil];
+    if(data != nil) {
+        return (NSMutableArray*)[NSKeyedUnarchiver unarchiveObjectWithData:data];
+    }
+    return [NSMutableArray array];
 }
 
 + (void) setAllAlarms:(NSMutableArray*)alarmArray;
 {
     if(alarmArray != nil) {
-        [[NSUserDefaults standardUserDefaults] setObject:alarmArray forKey:KEY_ALARMS];
+        NSData * data = [NSKeyedArchiver archivedDataWithRootObject:alarmArray];
+        [[NSUserDefaults standardUserDefaults] setObject:data forKey:KEY_ALARMS];
     }
 }
+
++ (int) getLastStoredTrackIndex; {
+    return [[NSUserDefaults standardUserDefaults] integerForKey:KEY_LAST_SELECTED_INDEX];
+}
+
++ (void) setLastStoredTrackIndex:(int)ind; {
+    [[NSUserDefaults standardUserDefaults] setInteger:ind forKey:KEY_LAST_SELECTED_INDEX];
+}
+
 @end

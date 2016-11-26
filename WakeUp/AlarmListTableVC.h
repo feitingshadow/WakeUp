@@ -10,4 +10,7 @@
 
 @interface AlarmListTableVC : UITableViewController
 
+- (IBAction) toggleEditMode;
+- (IBAction) backButtonTapped;
+
 @end

@@ -8,6 +8,7 @@
 
 #import "Alarm.h"
 #import "AppConstants.h"
+#import "DateUtility.h"
 
 #define KEY_ENCODER_DATE @"Date"
 #define KEY_ENCODER_INDEX @"Index"
@@ -45,10 +46,22 @@
         self.time = timeToStart;
         self.meditationTrackIndex = meditationIndex;
         for(int i = 0; i < DAYS_PER_WEEK; i++) {
-            weekdays[i] = 0;
+            weekdays[i] = 1;
         }
     }
     return self;
+}
+
++ (instancetype) alarm; {
+    return [self alarmWithHour:12 minutes:0];
+}
+
++ (instancetype) alarmWithHour:(int)hr minutes:(int)minutes; {
+    return [self alarmWithHour:hr minutes:minutes trackIndex:0];
+}
+
++ (instancetype) alarmWithHour:(int)hr minutes:(int)minutes trackIndex:(int)index; {
+    return [[Alarm alloc] initWithTime:[DateUtility dateWithHour:hr andMinutes:minutes] trackIndex:index];
 }
 
 - (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn; {
