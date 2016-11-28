@@ -9,16 +9,23 @@
 #import "Alarm.h"
 #import "AppConstants.h"
 #import "DateUtility.h"
+#import <UserNotifications/UserNotifications.h>
 
 #define KEY_ENCODER_DATE @"Date"
 #define KEY_ENCODER_INDEX @"Index"
 #define KEY_ENCODER_ACTIVE @"Active"
+#define KEY_ENCODER_UUID @"uuid"
 #define KEY_ENCODER_DAY(X) [NSString stringWithFormat:@"Day=%i",(X)]
+
+@interface Alarm()
+@property (nonatomic, strong) NSString * uuid;
+@end
 
 @implementation Alarm
 
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:self.time forKey:KEY_ENCODER_DATE];
+    [aCoder encodeObject:self.uuid forKey:KEY_ENCODER_UUID];
     [aCoder encodeInteger:self.meditationTrackIndex forKey:KEY_ENCODER_INDEX];
     [aCoder encodeBool:self.active forKey:KEY_ENCODER_ACTIVE];
     for(int i = 0; i < DAYS_PER_WEEK; i++) {
@@ -31,6 +38,7 @@
     self = [super init];
     if(self) {
         self.time = [aDecoder decodeObjectForKey: KEY_ENCODER_DATE];
+        self.uuid = [aDecoder decodeObjectForKey: KEY_ENCODER_UUID];
         self.meditationTrackIndex = [aDecoder decodeIntegerForKey: KEY_ENCODER_INDEX];
         self.active = [aDecoder decodeBoolForKey: KEY_ENCODER_ACTIVE];
         for(int i = 0; i < DAYS_PER_WEEK; i++) {
@@ -43,6 +51,7 @@
 - (instancetype) initWithTime:(NSDate*)timeToStart trackIndex:(int)meditationIndex; {
     self = [super init];
     if(self) {
+        self.uuid = [[NSUUID UUID] UUIDString];
         self.time = timeToStart;
         self.meditationTrackIndex = meditationIndex;
         for(int i = 0; i < DAYS_PER_WEEK; i++) {
@@ -66,6 +75,25 @@
 
 - (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn; {
     weekdays[dayIndex] = (isOn ? 1 : 0);
+    for(int index = 0; index < DAYS_PER_WEEK; index++) {
+        NSDateComponents * components = [[NSDateComponents alloc] init];
+        components.weekday = 7;
+        components.hour = 7;
+        
+//            [[UNUserNotificationCenter currentNotificationCenter] getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
+//                UNNotificationRequest * req;
+////                NSDictionary * info;
+//                NSString * alarmId;
+//                for(int i = 0; i < requests.count; i++) {
+//                    req = requests[i];
+//                    
+//                    alarmId = req.content.userInfo[KEY_ENCODER_UUID];
+//                    if(alarmId == self.uuid) {
+//                        [[UNUserNotificationCenter currentNotificationCenter] removePendingNotificationRequestsWithIdentifiers:@[KEY_ENCODER_UUID]];
+//                    }
+//                }
+//            }];
+    }
 }
 
 - (BOOL) getDayOfWeekIsOn:(int)dayOfWeek; {

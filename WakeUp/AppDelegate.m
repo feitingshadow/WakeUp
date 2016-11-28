@@ -7,7 +7,8 @@
 //
 
 #import "AppDelegate.h"
-
+#import "NotificationController.h"
+#import <UserNotifications/UserNotifications.h>
 @interface AppDelegate ()
 
 @end
@@ -16,7 +17,11 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    [NotificationController sharedInstance];
+    [NotificationController clearAllSeenNotifications];
+    
+//    [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:<#(nonnull UNNotificationRequest *)#> withCompletionHandler:<#^(NSError * _Nullable error)completionHandler#>]
     return YES;
 }
 

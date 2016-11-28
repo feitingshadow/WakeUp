@@ -8,9 +8,10 @@
 
 #import "AlarmController.h"
 #import "Settings.h"
+#import "NotificationController.h"
 
 @interface AlarmController()
-@property (nonatomic, strong) NSMutableArray * alarms;
+@property (nonatomic, strong) NSMutableArray<Alarm*> * alarms;
 @end
 
 @implementation AlarmController
@@ -33,6 +34,15 @@
     return self.alarms;
 }
 
+- (Alarm*) getAlarmWithUuid:(NSString*)uuid;
+{
+    for(Alarm * a in self.alarms) {
+        if(a.uuid == uuid) {
+            return a;
+        }
+    }
+    return nil;
+}
 
 - (Alarm*) getAlarmAtIndex:(int)index;
 {
@@ -64,9 +74,7 @@
     
     NSInteger index = [self.alarms indexOfObject:alarm];
     if(index != NSNotFound) {
-        [self.alarms removeObjectAtIndex:index];
-        [self save];
-        return YES;
+        return [self deleteAlarmAtIndex:index];
     }
     return NO;
 }
@@ -82,6 +90,14 @@
 }
 
 - (void) save; {
+    [NotificationController removeAllAlarmNotifications];
+    Alarm * a = nil;
+    for(int i = 0; i < self.alarms.count; i++) {
+        a = self.alarms[i];
+        if(a.active) {
+            [NotificationController sheduleNotificationForAlarm:a];
+        }
+    }
     [Settings setAllAlarms:self.alarms];
 }
 

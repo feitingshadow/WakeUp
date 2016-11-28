@@ -16,6 +16,7 @@
 @property (nonatomic, assign) int meditationTrackIndex;
 @property (nonatomic, assign) BOOL active;
 @property (nonatomic, strong) NSDate * time;
+@property (nonatomic, strong, readonly) NSString * uuid;
 
 - (instancetype) initWithTime:(NSDate*)time trackIndex:(int)meditationIndex;
 + (instancetype) alarm;

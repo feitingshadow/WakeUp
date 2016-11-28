@@ -34,6 +34,7 @@
  *********************/
 #define SECONDS_PER_MINUTE  60
 #define DAYS_PER_WEEK       7
+#define FIVE_MINUTES        300
 
 #define DATE_INDEX_SUNDAY       0
 #define DATE_INDEX_MONDAY       1

@@ -17,6 +17,7 @@
 + (AlarmController*) sharedInstance;
 
 - (Alarm*) getAlarmAtIndex:(int)index;
+- (Alarm*) getAlarmWithUuid:(NSString*)uuid;
 - (NSMutableArray*) getAlarms;
 - (void) saveAlarm: (Alarm*)alarm atIndex:(int)i;
 - (void) saveAlarms:(NSMutableArray*)alarms;

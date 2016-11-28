@@ -24,6 +24,9 @@
 		BDABFC5D1DE8BC2300282A04 /* AlarmChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */; };
 		BDABFC601DE9523600282A04 /* MultiSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */; };
 		BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */; };
+		BDABFC651DEB62B400282A04 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC641DEB62B400282A04 /* NotificationController.m */; };
+		BDABFC681DEB62D100282A04 /* UserAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC671DEB62D100282A04 /* UserAlertHelper.m */; };
+		BDABFC6B1DEBAE4200282A04 /* AppModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */; };
 		BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6C1DE35CEA00C12C81 /* main.m */; };
 		BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */; };
 		BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F721DE35CEA00C12C81 /* ViewController.m */; };
@@ -82,6 +85,12 @@
 		BDABFC5E1DE9523600282A04 /* MultiSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectButton.h; sourceTree = "<group>"; };
 		BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectButton.m; sourceTree = "<group>"; };
 		BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MultiSelectButton.xib; sourceTree = "<group>"; };
+		BDABFC631DEB62B400282A04 /* NotificationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NotificationController.h; sourceTree = "<group>"; };
+		BDABFC641DEB62B400282A04 /* NotificationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NotificationController.m; sourceTree = "<group>"; };
+		BDABFC661DEB62D000282A04 /* UserAlertHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAlertHelper.h; sourceTree = "<group>"; };
+		BDABFC671DEB62D100282A04 /* UserAlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAlertHelper.m; sourceTree = "<group>"; };
+		BDABFC691DEBAE4100282A04 /* AppModeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModeManager.h; sourceTree = "<group>"; };
+		BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModeManager.m; sourceTree = "<group>"; };
 		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -166,6 +175,10 @@
 				BD35007D1DE54C3C00654352 /* AlarmController.m */,
 				BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */,
 				BDC32FA01DE3809B00C12C81 /* TrackHelper.m */,
+				BDABFC631DEB62B400282A04 /* NotificationController.h */,
+				BDABFC641DEB62B400282A04 /* NotificationController.m */,
+				BDABFC691DEBAE4100282A04 /* AppModeManager.h */,
+				BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -252,6 +265,8 @@
 				BDC32F8A1DE3631B00C12C81 /* AudioMgr.m */,
 				BD3500771DE50C3000654352 /* DateUtility.h */,
 				BD3500781DE50C3000654352 /* DateUtility.m */,
+				BDABFC661DEB62D000282A04 /* UserAlertHelper.h */,
+				BDABFC671DEB62D100282A04 /* UserAlertHelper.m */,
 			);
 			name = Helpers;
 			sourceTree = "<group>";
@@ -485,6 +500,7 @@
 				BD3500811DE6520300654352 /* MultiSelectView.m in Sources */,
 				BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */,
 				BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */,
+				BDABFC681DEB62D100282A04 /* UserAlertHelper.m in Sources */,
 				BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */,
 				BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */,
 				BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */,
@@ -493,6 +509,7 @@
 				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,
 				BDC32F871DE362CA00C12C81 /* Settings.m in Sources */,
 				BDC32FB21DE3F0B200C12C81 /* MeditationTrack.m in Sources */,
+				BDABFC6B1DEBAE4200282A04 /* AppModeManager.m in Sources */,
 				BD3500791DE50C3000654352 /* DateUtility.m in Sources */,
 				BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */,
 				BDC32F8E1DE3636200C12C81 /* GradientView.m in Sources */,
@@ -502,6 +519,7 @@
 				BD3500731DE4EE3D00654352 /* AlarmListCell.m in Sources */,
 				BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */,
 				BDC32F941DE3680500C12C81 /* AlarmListTableVC.m in Sources */,
+				BDABFC651DEB62B400282A04 /* NotificationController.m in Sources */,
 				BD3500761DE4EE6100654352 /* Alarm.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

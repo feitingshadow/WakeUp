@@ -100,7 +100,7 @@
 }
 
 - (MeditationTrack*) trackAt:(int)index;
-{
+{ //TODO: Account for 0 to grab the daily meditation.
     return self.meditationTracks[index];
 }
 
