@@ -9,6 +9,8 @@
 #import "NotificationController.h"
 #import "TrackHelper.h"
 #import "AlarmController.h"
+#import "AppModeManager.h"
+#import "AppConstants.h"
 
 @implementation NotificationController
 
@@ -88,8 +90,7 @@
 
 //Called while active
 - (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler {
-    
-    //AppMode Controller - start playing alarm.
+    [self sendAlarmIDToPlay:notification.request.identifier];
     completionHandler(UNNotificationPresentationOptionNone);
 }
 
@@ -98,14 +99,17 @@
     if(response.actionIdentifier == UNNotificationDismissActionIdentifier) {
         //User chose to do nothing. Don't schedule any alarms.
     } else if(response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
-        //User entered the app after tapping. Play even if it's been awhile? Probably, since they said to.
-       Alarm * tempAlarm = [[AlarmController sharedInstance] getAlarmWithUuid: response.notification.request.identifier];
-        if(tempAlarm != nil) {
-            
-        } else {
-            
-        }
+        [self sendAlarmIDToPlay:response.notification.request.identifier];
     }
+}
+
+- (void) sendAlarmIDToPlay:(NSString*)alarmUUID {
     [NotificationController clearAllSeenNotifications];
+    Alarm * tempAlarm = [[AlarmController sharedInstance] getAlarmWithUuid: alarmUUID];
+    if(tempAlarm != nil) {
+        [[AppModeManager sharedInstance] startPlayingAlarm:tempAlarm];
+    } else {
+        DLOG(@"Alarm ID Not Found");
+    }
 }
 @end

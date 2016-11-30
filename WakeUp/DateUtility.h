@@ -11,7 +11,9 @@
 @interface DateUtility : NSObject
 
 + (NSString*) hoursAndMinutesForDate:(NSDate*)date;
++ (NSString*) minutesAndSecondsForInterval:(NSTimeInterval)interval;
 + (NSString *)amPmString:(NSDate *)date;
 + (NSDate*) dateWithHour:(int)hour andMinutes:(int)min;
++ (NSString *)timeWithAmPmForDate:(NSDate *)date;
 
 @end

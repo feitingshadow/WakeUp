@@ -6,7 +6,47 @@
 	<array>
 		<dict>
 			<key>Filename</key>
-			<string>Day of Gifts.mp3</string>
+			<string>1 Nothing to Fear.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>2 Remember Me.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>3 Find Inspiration.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>4 Day of Gifts.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>5 Father I Will Follow.mp3</string>
+			<key>Name</key>
+			<string>Day of Gifts Duplicate</string>
+			<key>Description</key>
+			<string>Meditation on Day of Gifts</string>
+		</dict>
+		<dict>
+			<key>Filename</key>
+			<string>6 I Love You Now Get Up.mp3</string>
 			<key>Name</key>
 			<string>Day of Gifts</string>
 			<key>Description</key>
@@ -14,7 +54,7 @@
 		</dict>
 		<dict>
 			<key>Filename</key>
-			<string>Day of Gifts.mp3</string>
+			<string>7 Spiritual Reality.mp3</string>
 			<key>Name</key>
 			<string>Day of Gifts Duplicate</string>
 			<key>Description</key>

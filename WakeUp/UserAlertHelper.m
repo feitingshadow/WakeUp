@@ -9,8 +9,10 @@
 #import "UserAlertHelper.h"
 
 @implementation UserAlertHelper
-- (void) showAlertWithTitle:(NSString*)t message:(NSString*)msg okText:(NSString*)okText;
+
++ (void) showAlertWithTitle:(NSString*)t message:(NSString*)msg presenter:(UIViewController*)presentingVC;
 {
-    #pragma warn not implemented method
+    UIAlertController * alert = [UIAlertController alertControllerWithTitle:t message:msg preferredStyle:UIAlertControllerStyleAlert];
+    [presentingVC presentViewController:alert animated:YES completion:nil];
 }
 @end

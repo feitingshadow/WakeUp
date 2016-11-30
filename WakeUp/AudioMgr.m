@@ -7,6 +7,7 @@
 //
 
 #import "AudioMgr.h"
+#import "AppConstants.h"
 
 @implementation AudioMgr
 
@@ -24,7 +25,7 @@
     NSError * error;
     AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];
     if(error != nil) {
-        NSLog(@"Error loading track is: %@", error);
+        DLOG_ARGS(@"Error loading track is: %@", error);
     } else {
 //        [player prepareToPlay];
     }
@@ -40,10 +41,19 @@
     AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];
     currentAudioPlayer = player;
     if(error != nil) {
-        NSLog(@"Error loading track is: %@", error);
+        DLOG_ARGS(@"Error loading track is: %@", error);
     } else {
         [player prepareToPlay];
     }
+}
+
+- (CGFloat) timeRemainingOnCurrentTrack;
+{
+    CGFloat remaining = 0.0f;
+    if(currentAudioPlayer != nil) {
+        remaining = currentAudioPlayer.duration - currentAudioPlayer.currentTime;
+    }
+    return remaining;
 }
 
 - (void) playTrack {

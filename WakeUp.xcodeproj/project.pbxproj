@@ -27,6 +27,14 @@
 		BDABFC651DEB62B400282A04 /* NotificationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC641DEB62B400282A04 /* NotificationController.m */; };
 		BDABFC681DEB62D100282A04 /* UserAlertHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC671DEB62D100282A04 /* UserAlertHelper.m */; };
 		BDABFC6B1DEBAE4200282A04 /* AppModeManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */; };
+		BDABFC751DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC6D1DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 */; };
+		BDABFC761DEF5BC000282A04 /* 1 Nothing to Fear.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC6E1DEF5BC000282A04 /* 1 Nothing to Fear.mp3 */; };
+		BDABFC771DEF5BC000282A04 /* 2 Remember Me.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC6F1DEF5BC000282A04 /* 2 Remember Me.mp3 */; };
+		BDABFC781DEF5BC000282A04 /* 3 Find Inspiration.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC701DEF5BC000282A04 /* 3 Find Inspiration.mp3 */; };
+		BDABFC791DEF5BC000282A04 /* 4 Day of Gifts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC711DEF5BC000282A04 /* 4 Day of Gifts.mp3 */; };
+		BDABFC7A1DEF5BC000282A04 /* 5 Father I Will Follow.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC721DEF5BC000282A04 /* 5 Father I Will Follow.mp3 */; };
+		BDABFC7B1DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC731DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 */; };
+		BDABFC7C1DEF5BC000282A04 /* 7 Spiritual Reality.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC741DEF5BC000282A04 /* 7 Spiritual Reality.mp3 */; };
 		BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6C1DE35CEA00C12C81 /* main.m */; };
 		BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */; };
 		BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F721DE35CEA00C12C81 /* ViewController.m */; };
@@ -42,7 +50,6 @@
 		BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F9A1DE3693200C12C81 /* WakeUpMakeAlarmVC.m */; };
 		BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32F9D1DE3697500C12C81 /* AlarmTrackSelectTableVC.m */; };
 		BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FA01DE3809B00C12C81 /* TrackHelper.m */; };
-		BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */; };
 		BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */; };
 		BDC32FB21DE3F0B200C12C81 /* MeditationTrack.m in Sources */ = {isa = PBXBuildFile; fileRef = BDC32FB11DE3F0B200C12C81 /* MeditationTrack.m */; };
 		BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */ = {isa = PBXBuildFile; fileRef = BDC32FB41DE3F88900C12C81 /* TrackInfo.plist */; };
@@ -91,6 +98,14 @@
 		BDABFC671DEB62D100282A04 /* UserAlertHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAlertHelper.m; sourceTree = "<group>"; };
 		BDABFC691DEBAE4100282A04 /* AppModeManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppModeManager.h; sourceTree = "<group>"; };
 		BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppModeManager.m; sourceTree = "<group>"; };
+		BDABFC6D1DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "00 - Alarm Chimes.mp3"; sourceTree = "<group>"; };
+		BDABFC6E1DEF5BC000282A04 /* 1 Nothing to Fear.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "1 Nothing to Fear.mp3"; sourceTree = "<group>"; };
+		BDABFC6F1DEF5BC000282A04 /* 2 Remember Me.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "2 Remember Me.mp3"; sourceTree = "<group>"; };
+		BDABFC701DEF5BC000282A04 /* 3 Find Inspiration.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "3 Find Inspiration.mp3"; sourceTree = "<group>"; };
+		BDABFC711DEF5BC000282A04 /* 4 Day of Gifts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "4 Day of Gifts.mp3"; sourceTree = "<group>"; };
+		BDABFC721DEF5BC000282A04 /* 5 Father I Will Follow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "5 Father I Will Follow.mp3"; sourceTree = "<group>"; };
+		BDABFC731DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "6 I Love You Now Get Up.mp3"; sourceTree = "<group>"; };
+		BDABFC741DEF5BC000282A04 /* 7 Spiritual Reality.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "7 Spiritual Reality.mp3"; sourceTree = "<group>"; };
 		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -120,7 +135,6 @@
 		BDC32F9F1DE3809B00C12C81 /* TrackHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TrackHelper.h; sourceTree = "<group>"; };
 		BDC32FA01DE3809B00C12C81 /* TrackHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TrackHelper.m; sourceTree = "<group>"; };
 		BDC32FA21DE3835B00C12C81 /* AppConstants.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppConstants.h; sourceTree = "<group>"; };
-		BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Day of Gifts.mp3"; sourceTree = "<group>"; };
 		BDC32FAC1DE3EEC300C12C81 /* SimpleListCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleListCell.h; sourceTree = "<group>"; };
 		BDC32FAD1DE3EEC300C12C81 /* SimpleListCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleListCell.m; sourceTree = "<group>"; };
 		BDC32FB01DE3F0B200C12C81 /* MeditationTrack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeditationTrack.h; sourceTree = "<group>"; };
@@ -181,6 +195,21 @@
 				BDABFC6A1DEBAE4200282A04 /* AppModeManager.m */,
 			);
 			name = Controllers;
+			sourceTree = "<group>";
+		};
+		BDABFC6C1DEF5BC000282A04 /* AlarmSounds */ = {
+			isa = PBXGroup;
+			children = (
+				BDABFC6D1DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 */,
+				BDABFC6E1DEF5BC000282A04 /* 1 Nothing to Fear.mp3 */,
+				BDABFC6F1DEF5BC000282A04 /* 2 Remember Me.mp3 */,
+				BDABFC701DEF5BC000282A04 /* 3 Find Inspiration.mp3 */,
+				BDABFC711DEF5BC000282A04 /* 4 Day of Gifts.mp3 */,
+				BDABFC721DEF5BC000282A04 /* 5 Father I Will Follow.mp3 */,
+				BDABFC731DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 */,
+				BDABFC741DEF5BC000282A04 /* 7 Spiritual Reality.mp3 */,
+			);
+			path = AlarmSounds;
 			sourceTree = "<group>";
 		};
 		BDC32F5F1DE35CE900C12C81 = {
@@ -298,7 +327,7 @@
 		BDC32FA41DE3851900C12C81 /* Audio */ = {
 			isa = PBXGroup;
 			children = (
-				BDC32FA51DE3851900C12C81 /* Day of Gifts.mp3 */,
+				BDABFC6C1DEF5BC000282A04 /* AlarmSounds */,
 			);
 			path = Audio;
 			sourceTree = "<group>";
@@ -469,11 +498,18 @@
 			files = (
 				BDABFC551DE73D1700282A04 /* AlarmButton@2x.png in Resources */,
 				BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */,
+				BDABFC771DEF5BC000282A04 /* 2 Remember Me.mp3 in Resources */,
 				BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */,
+				BDABFC7B1DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 in Resources */,
+				BDABFC791DEF5BC000282A04 /* 4 Day of Gifts.mp3 in Resources */,
 				BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */,
-				BDC32FA81DE3851900C12C81 /* Day of Gifts.mp3 in Resources */,
 				BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */,
+				BDABFC781DEF5BC000282A04 /* 3 Find Inspiration.mp3 in Resources */,
 				BDABFC561DE73D1800282A04 /* AlarmButton@3x.png in Resources */,
+				BDABFC7C1DEF5BC000282A04 /* 7 Spiritual Reality.mp3 in Resources */,
+				BDABFC7A1DEF5BC000282A04 /* 5 Father I Will Follow.mp3 in Resources */,
+				BDABFC761DEF5BC000282A04 /* 1 Nothing to Fear.mp3 in Resources */,
+				BDABFC751DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 in Resources */,
 				BDABFC571DE73D1800282A04 /* InfoButton@2x.png in Resources */,
 				BDABFC581DE73D1800282A04 /* InfoButton@3x.png in Resources */,
 				BDABFC5A1DE73D1800282A04 /* MusicButton@3x.png in Resources */,

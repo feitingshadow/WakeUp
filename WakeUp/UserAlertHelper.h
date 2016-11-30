@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 @interface UserAlertHelper : NSObject
 
-- (void) showAlertWithTitle:(NSString*)t message:(NSString*)msg okText:(NSString*)okText;
++ (void) showAlertWithTitle:(NSString*)t message:(NSString*)msg presenter:(UIViewController*)presentingVC;
 
 @end

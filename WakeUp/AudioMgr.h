@@ -21,4 +21,6 @@
 - (void) pauseCurrentTrack;
 - (void) stopTrack;
 
+- (CGFloat) timeRemainingOnCurrentTrack;
+
 @end

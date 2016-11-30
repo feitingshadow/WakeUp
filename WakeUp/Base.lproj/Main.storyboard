@@ -252,7 +252,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="320" height="107"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <connections>
-                                            <segue destination="sHx-TK-bSO" kind="show" id="uUd-HY-s8l"/>
+                                            <segue destination="sHx-TK-bSO" kind="show" identifier="TrackSelect" id="uUd-HY-s8l"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -438,6 +438,9 @@
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vEx-v6-3Er">
                                                         <rect key="frame" x="0.0" y="0.0" width="188" height="38"/>
                                                         <state key="normal" title="Button"/>
+                                                        <connections>
+                                                            <action selector="playPausePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="SlY-qW-Ide"/>
+                                                        </connections>
                                                     </button>
                                                 </subviews>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -481,6 +484,9 @@
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OKR-cw-AEj">
                                                 <rect key="frame" x="0.0" y="0.0" width="312" height="64"/>
+                                                <connections>
+                                                    <action selector="snoozeButtonPreseed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="h0l-tU-Jfa"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -554,30 +560,17 @@
                                             <constraint firstAttribute="trailing" secondItem="gd7-jq-d4u" secondAttribute="trailing" id="txS-Ai-YdC"/>
                                         </constraints>
                                     </view>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0j9-xf-zl3" customClass="GradientView">
-                                        <rect key="frame" x="24" y="95" width="256" height="50"/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <userDefinedRuntimeAttributes>
-                                            <userDefinedRuntimeAttribute type="color" keyPath="toColor">
-                                                <color key="value" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            </userDefinedRuntimeAttribute>
-                                        </userDefinedRuntimeAttributes>
-                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstItem="0j9-xf-zl3" firstAttribute="top" secondItem="DaJ-JC-fdB" secondAttribute="bottom" constant="8" id="1Pl-nj-vRI"/>
                                     <constraint firstItem="8jZ-ro-Dun" firstAttribute="centerY" secondItem="I0U-L5-kVQ" secondAttribute="centerY" id="44t-Lk-rul"/>
-                                    <constraint firstItem="8jZ-ro-Dun" firstAttribute="top" secondItem="0j9-xf-zl3" secondAttribute="bottom" constant="8" id="6dF-Hq-vAd"/>
                                     <constraint firstAttribute="trailing" secondItem="8jZ-ro-Dun" secondAttribute="trailing" constant="8" id="G1A-RN-wjy"/>
                                     <constraint firstAttribute="trailing" secondItem="qhn-M4-TGO" secondAttribute="trailing" constant="8" id="L6g-Dt-KBB"/>
                                     <constraint firstAttribute="bottom" secondItem="PKN-0m-0gK" secondAttribute="bottom" constant="62" id="W8t-aG-V9D"/>
                                     <constraint firstItem="DaJ-JC-fdB" firstAttribute="top" secondItem="I0U-L5-kVQ" secondAttribute="top" constant="23" id="WHu-Fw-KVg"/>
                                     <constraint firstAttribute="trailing" secondItem="DaJ-JC-fdB" secondAttribute="trailing" constant="4" id="WyM-HH-dGh"/>
-                                    <constraint firstItem="0j9-xf-zl3" firstAttribute="leading" secondItem="I0U-L5-kVQ" secondAttribute="leading" constant="24" id="fX7-nm-gPU"/>
                                     <constraint firstAttribute="bottom" secondItem="qhn-M4-TGO" secondAttribute="bottom" constant="31" id="hCc-OV-2P1"/>
                                     <constraint firstItem="8jZ-ro-Dun" firstAttribute="leading" secondItem="I0U-L5-kVQ" secondAttribute="leading" constant="8" id="k1Q-6Q-gIi"/>
-                                    <constraint firstAttribute="trailing" secondItem="0j9-xf-zl3" secondAttribute="trailing" constant="40" id="lMQ-ua-kip"/>
                                     <constraint firstItem="PKN-0m-0gK" firstAttribute="centerX" secondItem="I0U-L5-kVQ" secondAttribute="centerX" id="mo9-r5-LzW"/>
                                     <constraint firstItem="qhn-M4-TGO" firstAttribute="leading" secondItem="I0U-L5-kVQ" secondAttribute="leading" constant="8" id="odh-D6-Hgu"/>
                                     <constraint firstItem="DaJ-JC-fdB" firstAttribute="leading" secondItem="I0U-L5-kVQ" secondAttribute="leading" constant="4" id="wOo-Pw-Ety"/>
@@ -595,6 +588,17 @@
                     <navigationItem key="navigationItem" id="eWr-e5-42U"/>
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="currentSongNameLabel" destination="Qvn-3F-Dqy" id="MKG-wQ-kNW"/>
+                        <outlet property="iconsView" destination="PKN-0m-0gK" id="7z1-5d-ybE"/>
+                        <outlet property="playPauseButton" destination="vEx-v6-3Er" id="qvP-ZS-TRk"/>
+                        <outlet property="playPauseImageView" destination="B6h-Zx-dyA" id="OOW-TM-Wwy"/>
+                        <outlet property="snoozeLabel" destination="fWJ-xo-6E3" id="iAG-Uj-MhR"/>
+                        <outlet property="snoozeView" destination="DaJ-JC-fdB" id="496-Wv-h4g"/>
+                        <outlet property="swipeToStopAlarmLabel" destination="qhn-M4-TGO" id="qUa-Wq-WW2"/>
+                        <outlet property="theTimeLabel" destination="DG2-6K-0PM" id="2nC-Yq-em7"/>
+                        <outlet property="timeRemainingLabel" destination="rwP-IT-L1c" id="Wwy-yg-687"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

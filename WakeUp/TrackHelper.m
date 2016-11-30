@@ -68,11 +68,11 @@
                 [self.meditationTracks addObject:medTrack];
             }
             else { //Unit tests take care of these, erase.
-                NSLog(@"One key is nil for track %i in %@, %@, %@", i, tempMeditationName, tempFileName, tempDescription );
+                DLOG_ARGS(@"One key is nil for track %i in %@, %@, %@", i, tempMeditationName, tempFileName, tempDescription );
             }
         }
     } else {
-        NSLog(@"Didn't get trackDictionary from path");
+        DLOG(@"Didn't get trackDictionary from path");
     }
 }
 

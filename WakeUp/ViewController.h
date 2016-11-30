@@ -7,8 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AppModeManager.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController <AppModeManagerDelegate>
 {
     
 }

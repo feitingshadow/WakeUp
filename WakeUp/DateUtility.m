@@ -7,6 +7,7 @@
 //
 
 #import "DateUtility.h"
+#import "AppConstants.h"
 
 static NSDateFormatter * dateFormatter = nil;
 static NSDateComponents * dateComponents = nil;
@@ -16,11 +17,22 @@ static NSDateComponents * dateComponents = nil;
 + (void) initialize {
     dateFormatter = [[NSDateFormatter alloc] init];
     dateComponents = [[NSDateComponents alloc] init]; //be sure to manually reset any reused component
-
 }
 
 + (NSString *)hoursAndMinutesForDate:(NSDate *)date {
     dateFormatter.dateFormat = @"HH:mm";
+    return [dateFormatter stringFromDate:date];
+}
+
++ (NSString*) minutesAndSecondsForInterval:(NSTimeInterval)interval;
+{
+    int minutes = interval/SECONDS_PER_MINUTE;
+    int seconds = (int)interval % SECONDS_PER_MINUTE;
+    
+    return [NSString stringWithFormat:@"%i:%02i", minutes,seconds];
+}
++ (NSString *)timeWithAmPmForDate:(NSDate *)date {
+    dateFormatter.dateFormat = @"HH:mma";
     return [dateFormatter stringFromDate:date];
 }
 
