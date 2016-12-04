@@ -20,7 +20,7 @@ static NSDateComponents * dateComponents = nil;
 }
 
 + (NSString *)hoursAndMinutesForDate:(NSDate *)date {
-    dateFormatter.dateFormat = @"HH:mm";
+    dateFormatter.dateFormat = @"hh:mm";
     return [dateFormatter stringFromDate:date];
 }
 

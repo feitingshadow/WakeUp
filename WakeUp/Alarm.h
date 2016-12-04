@@ -16,13 +16,14 @@
 @property (nonatomic, assign) int meditationTrackIndex;
 @property (nonatomic, assign) BOOL active;
 @property (nonatomic, strong) NSDate * time;
-@property (nonatomic, strong, readonly) NSString * uuid;
+@property (nonatomic, readonly) NSString * uuid;
 
 - (instancetype) initWithTime:(NSDate*)time trackIndex:(int)meditationIndex;
 + (instancetype) alarm;
 + (instancetype) alarmWithHour:(int)hr minutes:(int)minutes;
 + (instancetype) alarmWithHour:(int)hr minutes:(int)minutes trackIndex:(int)index;
 
++ (NSString*) snoozingIdentifier;
 - (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn;
 - (BOOL) getDayOfWeekIsOn:(int)dayOfWeek;
 

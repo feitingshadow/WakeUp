@@ -8,6 +8,7 @@
 
 #import "AppModeManager.h"
 #import "AppConstants.h"
+#import "NotificationController.h"
 
 @interface AppModeManager()
 {
@@ -34,6 +35,7 @@
 }
 
 - (void) innerInitialize {
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(stopPlaying) name:@"AudioPlayerDidFinish" object:nil];
     [self changeMode:AppModeNotPlaying];
 }
 
@@ -45,11 +47,13 @@
     [[AudioMgr sharedInstance] playTrack];
     self.currentAlarm = alarm;
     [self changeMode:AppModePlaying];
+
 }
 
 - (void) snooze; {
     if(_currentAppMode == AppModePlaying) {
         [[AudioMgr sharedInstance] pauseCurrentTrack];
+        [self stopSnoozeTimer];
         [self changeMode:AppModeSnooze];
         [self performSelector:@selector(unpauseSnooze:) withObject:nil afterDelay:FIVE_MINUTES];
     }
@@ -72,12 +76,18 @@
 
 - (void) unpauseSnooze:(id)obj {
     if(_currentAppMode == AppModeSnooze && self.currentAlarm != nil) {
-        [self startPlayingAlarm:self.currentAlarm];
+        [self stopSnoozeTimer];
+        [[AudioMgr sharedInstance] playTrack];
+        [self changeMode:AppModePlaying];
     }
 }
 
 - (void) stopSnoozeTimer; {
+    [NotificationController removeNotificationsWithIdentifier:[Alarm snoozingIdentifier]];
     [NSObject cancelPreviousPerformRequestsWithTarget:self];
 }
 
+- (void) dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self]; //Being clean, even though won't be deallocated.
+}
 @end

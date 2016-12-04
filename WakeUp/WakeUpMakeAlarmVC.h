@@ -16,6 +16,7 @@
 }
 
 @property (nonatomic, weak) IBOutlet MultiSelectView * weekdaySelectView;
+@property (nonatomic, weak) IBOutlet UIDatePicker * datePicker;
 @property (nonatomic, weak) IBOutlet UILabel * trackTitleLabel;
 @property (nonatomic, weak) IBOutlet UILabel * trackDescriptionLabel;
 

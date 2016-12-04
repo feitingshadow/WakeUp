@@ -12,11 +12,16 @@
 @interface AudioMgr : NSObject <AVAudioPlayerDelegate>
 {
     AVAudioPlayer * currentAudioPlayer;
+    BOOL isPaused;
+    BOOL isStopped;
 }
 + (AudioMgr*) sharedInstance;
 + (CGFloat) getLengthOfAudioFileFromURL:(NSURL*)fileURL;
 - (void) setNextTrack:(NSURL*)fileURL;
 
+- (AVAudioPlayer*) getCurrentAudioPlayer;
+- (BOOL) isPaused;
+- (BOOL) isStopped;
 - (void) playTrack;
 - (void) pauseCurrentTrack;
 - (void) stopTrack;

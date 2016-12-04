@@ -18,7 +18,7 @@
 #define KEY_ENCODER_DAY(X) [NSString stringWithFormat:@"Day=%i",(X)]
 
 @interface Alarm()
-@property (nonatomic, strong) NSString * uuid;
+@property (nonatomic, copy) NSString * uuid;
 @end
 
 @implementation Alarm
@@ -43,6 +43,10 @@
         self.active = [aDecoder decodeBoolForKey: KEY_ENCODER_ACTIVE];
         for(int i = 0; i < DAYS_PER_WEEK; i++) {
             weekdays[i] =[aDecoder decodeIntegerForKey: KEY_ENCODER_DAY(i)];
+        }
+        //Ensure uuid
+        if(self.uuid == nil) {
+            self.uuid = [[NSUUID UUID] UUIDString];
         }
     }
     return self;
@@ -94,6 +98,10 @@
 //                }
 //            }];
     }
+}
+
++ (NSString*) snoozingIdentifier; {
+    return @"Snoozing";
 }
 
 - (BOOL) getDayOfWeekIsOn:(int)dayOfWeek; {

@@ -8,57 +8,66 @@
 			<key>Filename</key>
 			<string>1 Nothing to Fear.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Nothing to Fear</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>Release fear upon waking and gently align your mind with a purpose for the day</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>2 Remember Me.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Remember Me</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>Align with the Holy Spirit in every moment and release concerns</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>3 Find Inspiration.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Find Inspiration</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>Turn within, release personal responsibility. Find inspiration to start the day</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>4 Day of Gifts.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Day of Gifts</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>A light-filled reminder of the joy in store for you as this day unfolds perfectly</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>5 Father I Will Follow.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Father, I Will Follow</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>A powerful Lesson and prayer directly from A Course In Miracles</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>6 I Love You Now Get Up.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts</string>
+			<string>I Love You, Now Get Up</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>Remember and align with inner strength and your higher purpose</string>
 		</dict>
 		<dict>
 			<key>Filename</key>
 			<string>7 Spiritual Reality.mp3</string>
 			<key>Name</key>
-			<string>Day of Gifts Duplicate</string>
+			<string>Spiritual Reality</string>
 			<key>Description</key>
-			<string>Meditation on Day of Gifts</string>
+			<string>A prayer of remembrance, acceptance, and trust. Align with strength and purpose</string>
+		</dict>
+	</array>
+	<key>Chimes</key>
+	<array>
+		<dict>
+			<key>Filename</key>
+			<string>00 - Alarm Chimes.wav</string>
+			<key>Name</key>
+			<string>Chime</string>
 		</dict>
 	</array>
 </dict>

@@ -12,7 +12,7 @@
 #import <math.h>
 
 @interface ViewController () {
-    CGPoint snoozeViewOriginPt;
+    CGPoint swipeToStopLabelOriginPt;
     CGPoint lastDelta; //for measuring velocity of flick
     CGPoint flickThresholdDelta; //for measuring velocity of flick
     CGFloat distanceThresholdDelta; //for measuring velocity of flick
@@ -27,7 +27,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     [[AppModeManager sharedInstance] setAppModeDelegate:self];
-    [self initializeInnerFields];
+    [self updateUI];
     [NSTimer scheduledTimerWithTimeInterval:2 repeats:YES block:^(NSTimer * _Nonnull timer) {
        dispatch_async(dispatch_get_main_queue(), ^{
            if ([[UIApplication sharedApplication] applicationState] == UIApplicationStateActive)
@@ -39,9 +39,15 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
+- (void) viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [self initializeInnerFields];
+    [self AppModeManager:nil didChangeToMode:[[AppModeManager sharedInstance] currentAppMode]];
+}
 - (void) initializeInnerFields; {
-    snoozeViewOriginPt = self.snoozeView.center;
-    flickThresholdDelta = CGPointMake(10.0f, 0);
+    swipeToStopLabelOriginPt = self.swipeToStopAlarmLabel.center;
+    flickThresholdDelta = CGPointMake(2.0f, 0);
     distanceThresholdDelta = 25.0f;
 }
 
@@ -63,12 +69,18 @@
 #pragma mark - IBActions
 - (IBAction)snoozeButtonPreseed:(UIButton*)button;
 {
-    
+    [[AppModeManager sharedInstance] snooze];
 }
 
 - (IBAction)playPausePressed:(UIButton*)button;
 {
-    
+    //TODO: Implement didEndNotification
+    if([[AudioMgr sharedInstance] getCurrentAudioPlayer].isPlaying) {
+        [[AudioMgr sharedInstance] pauseCurrentTrack];
+    } else {
+        [[AudioMgr sharedInstance] playTrack];
+    }
+    [self updatePlayPauseButton];
 }
 
 - (IBAction)swipeToStopSwiped;
@@ -89,22 +101,25 @@
     self.currentSongNameLabel.hidden = YES;
     self.timeRemainingLabel.hidden = YES;
     self.swipeToStopAlarmLabel.hidden = YES;
-    
+    self.playPauseContainerView.hidden = YES;
     if(theMode == AppModeNotPlaying) {
         self.iconsView.hidden = NO;
     } else if (theMode == AppModeSnooze) {
         //Snooze = time + remaining label with "Snoozing"
         self.timeRemainingLabel.hidden = NO; //Set Text to:
-    } else {
+    } else { // playing
         self.swipeToStopAlarmLabel.hidden = NO;
         self.snoozeView.hidden = NO;
         self.currentSongNameLabel.hidden = NO;
         self.timeRemainingLabel.hidden = NO;
+        self.playPauseContainerView.hidden = YES;
     }
 }
 
 - (void) updateUI {
-    self.theTimeLabel.text = [DateUtility timeWithAmPmForDate:[NSDate date]];
+    NSDate * nowDate = [NSDate date];
+    self.theTimeLabel.text = [DateUtility hoursAndMinutesForDate:nowDate];
+    self.amLabel.text = [DateUtility amPmString:nowDate];
     AppMode mode = [[AppModeManager sharedInstance] currentAppMode];
     if(mode == AppModeNotPlaying) {
         //It is considered playing if it is paused, because it's about the alarm, not the track. Do not alter the play/pause button here.
@@ -120,11 +135,34 @@
         NSString * timeRemaining = [DateUtility minutesAndSecondsForInterval:remainingInterval];
         self.timeRemainingLabel.text = timeRemaining;
         self.currentSongNameLabel.text = track.trackName;
+        [self updatePlayPauseButton];
+        
+    }
+}
+
+- (void) updatePlayPauseButton {
+    AudioMgr * audioManager = [AudioMgr sharedInstance];
+    AVAudioPlayer * player = [audioManager getCurrentAudioPlayer];
+    if(player != nil) {
+        self.playPauseContainerView.hidden = NO;
+        if(player.isPlaying) {
+            self.playPauseImageView.image = [UIImage imageNamed:@"PauseButton"];
+        } else {
+            self.playPauseImageView.image = [UIImage imageNamed:@"PlayButton"];
+            if([audioManager isStopped]) {
+                
+            }
+            else if([audioManager isPaused]) {
+                
+            }
+        }
+    } else {
+        self.playPauseContainerView.hidden = YES;
     }
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
-    if(self.snoozeView.hidden == NO) {
+    if(self.swipeToStopAlarmLabel.hidden == NO) {
         isSliding = YES;
     }
 }
@@ -134,27 +172,31 @@
         CGPoint currentPoint = [touches.anyObject locationInView:self.view];
         CGPoint lastPoint = [touches.anyObject previousLocationInView:self.view];
         CGPoint delta = CGPointMake(currentPoint.x - lastPoint.x, currentPoint.y - lastPoint.y);
-        self.snoozeView.center = CGPointMake(self.snoozeView.center.x + delta.x, self.snoozeView.center.y );
+        self.swipeToStopAlarmLabel.center = CGPointMake(self.swipeToStopAlarmLabel.center.x + delta.x, self.swipeToStopAlarmLabel.center.y );
         lastDelta = delta;
     }
 }
 
 - (void) touchesEnded:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event{
     if(isSliding) {
-        CGPoint viewCtr = self.snoozeView.center;
+        CGPoint viewCtr = self.swipeToStopAlarmLabel.center;
+        __weak ViewController * weakSelf = self;
 
-        if(lastDelta.x > flickThresholdDelta.x && fabs (viewCtr.x - snoozeViewOriginPt.x)) {
+        if(lastDelta.x > flickThresholdDelta.x && fabs (viewCtr.x - swipeToStopLabelOriginPt.x)) {
             int direction = (lastDelta.x > 0) ? 1 : -1;
-            __weak ViewController * weakSelf = self;
             [UIView animateWithDuration:0.2 delay:0 options:UIViewAnimationOptionCurveLinear animations:^{
-                weakSelf.snoozeView.center = CGPointMake(viewCtr.x + direction * self.snoozeView.frame.size.width, viewCtr.y);
-                weakSelf.snoozeView.alpha = 0;
+                weakSelf.swipeToStopAlarmLabel.center = CGPointMake(viewCtr.x + direction * self.swipeToStopAlarmLabel.frame.size.width, viewCtr.y);
+                weakSelf.swipeToStopAlarmLabel.alpha = 0;
                 
             } completion:^(BOOL finished) {
                 [[AppModeManager sharedInstance] stopPlaying];
-                weakSelf.snoozeView.center = snoozeViewOriginPt;
-                weakSelf.snoozeView.alpha = 1;
+                weakSelf.swipeToStopAlarmLabel.center = swipeToStopLabelOriginPt;
+                weakSelf.swipeToStopAlarmLabel.alpha = 1;
             }];
+        } else {
+            [UIView animateWithDuration:0.15 delay:0 options:UIViewAnimationOptionCurveEaseIn animations:^{
+                weakSelf.swipeToStopAlarmLabel.center = swipeToStopLabelOriginPt;
+            } completion:^(BOOL finished) { }];
         }
     }
     isSliding = NO;

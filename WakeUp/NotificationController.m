@@ -57,22 +57,67 @@
  
 }
 
-+ (void) sheduleNotificationForAlarm:(Alarm*)alarm; {
-    [self removeNotificationForAlarm:alarm];
-    
-    NSDateComponents *alarmComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:alarm.time];
-    UNCalendarNotificationTrigger * calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:alarmComponents repeats:YES];
-    
-    NSString * notificationMessage = [NSString stringWithFormat:@"Wake Up! Track: %@", [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex].trackName];
++ (void) scheduleNotificationAtDate:(NSDate*)date withBody:(NSString*)body title:(NSString*)title id:(NSString*)uniqueId soundName:(NSString*)soundName repeating:(BOOL)repeat {
+    if(date == nil) {
+        int x = 5;
+        x = x + x;
+    }
+    NSDateComponents *alarmComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekOfYear fromDate:date];
+    if(alarmComponents == nil) {
+        int x = 5;
+        x = x + x;
+    }
+    UNCalendarNotificationTrigger * calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:alarmComponents repeats:repeat];
+    if(calendarTrigger == nil) {
+        int x = 5;
+        x = x + x;
+    }
     UNMutableNotificationContent * content = [UNMutableNotificationContent new];
-   
-    content.body = notificationMessage;
-    content.title = @"Wake Up";
-    
-    UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:alarm.uuid content:content trigger:calendarTrigger];
+    content.body = body;
+    content.title = title;
+    content.sound = [UNNotificationSound soundNamed:soundName];
+    UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:uniqueId content:content trigger:calendarTrigger];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
         
     }];
+}
+
++ (void) sheduleSnoozeForAlarm:(Alarm*)alarm;
+{
+    MeditationTrack * mt = [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex];
+
+    [NotificationController scheduleNotificationAtDate:[NSDate dateWithTimeIntervalSinceNow:FIVE_MINUTES] withBody:[NSString stringWithFormat:@"Snooze Alarm: %@", mt.trackName] title:@"Snooze" id:[Alarm snoozingIdentifier] soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:NO];
+}
+
++ (void) removeNotificationsWithIdentifier:(NSString*) identifier;
+{
+    [[UNUserNotificationCenter currentNotificationCenter] removeDeliveredNotificationsWithIdentifiers:@[identifier]];
+    [[UNUserNotificationCenter currentNotificationCenter] removePendingNotificationRequestsWithIdentifiers:@[identifier]];
+}
+
++ (void) sheduleNotificationForAlarm:(Alarm*)alarm; {
+    [self removeNotificationForAlarm:alarm];
+    MeditationTrack * mt;
+    NSDateComponents *alarmComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekday | NSCalendarUnitHour | NSCalendarUnitMinute fromDate:alarm.time];
+    
+    NSCalendar *calendar = [[NSCalendar alloc] initWithCalendarIdentifier:NSCalendarIdentifierGregorian];
+
+    for(int i = 0; i < DAYS_PER_WEEK; i++) {
+        if([alarm getDayOfWeekIsOn:i]) {
+            
+            NSDate *now = [NSDate date];
+            NSDateComponents *componentsForFireDate = [calendar components:(NSCalendarUnitYear | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute| NSCalendarUnitSecond | NSCalendarUnitWeekday) fromDate: now];
+            [componentsForFireDate setWeekday: i+1];
+            [componentsForFireDate setHour: alarmComponents.hour];
+            [componentsForFireDate setMinute: alarmComponents.minute];
+            [componentsForFireDate setCalendar:calendar];
+//            [alarmComponents setWeekday:i+1];
+            alarm.time = [componentsForFireDate date];
+            mt = [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex];
+            [NotificationController scheduleNotificationAtDate:alarm.time withBody:[NSString stringWithFormat:@"Wake Up To: %@", mt.trackName] title:@"Wake Up!" id:alarm.uuid soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:YES];
+        }
+    }
+//    [NotificationController scheduleNotificationAtDate:alarm.time withBody:[NSString stringWithFormat:@"Wake Up To: %@", mt.trackName] title:@"Wake Up!" id:alarm.uuid soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:YES];
 }
 
 + (void) removeNotificationForAlarm:(Alarm*)alarm {

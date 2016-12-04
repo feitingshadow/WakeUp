@@ -11,14 +11,19 @@
 #import "AppConstants.h"
 #import "Settings.h"
 #import "MeditationTrack.h"
+#import <UIKit/UIKit.h>
 
+#define KEY_TRACK_INFO_PLIST @"TrackInfo"
 #define KEY_FILENAME @"Filename"
 #define KEY_TRACKNAME @"Name"
 #define KEY_TRACKDESCRIPTION @"Description"
+#define KEY_CHIME @"Chimes"
+#define KEY_TRACK @"Tracks"
 
 @interface TrackHelper()
 @property (strong, nonatomic) NSMutableArray * trackFileNames; //unlocked tracks
-@property (strong, nonatomic) NSMutableArray * meditationTracks; // all tracks
+@property (strong, nonatomic) NSMutableArray<MeditationTrack*> * meditationTracks; // all tracks
+@property (strong, nonatomic) NSMutableArray<Chime*> * chimes; // all tracks
 
 @end
 
@@ -30,6 +35,13 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[TrackHelper alloc] init];
         [sharedInstance privateInitialization];
+        NSArray *fontFamilies = [UIFont familyNames];
+        for (int i = 0; i < [fontFamilies count]; i++)
+        {
+            NSString *fontFamily = [fontFamilies objectAtIndex:i];
+            NSArray *fontNames = [UIFont fontNamesForFamilyName:[fontFamilies objectAtIndex:i]];
+            NSLog (@"%@: %@", fontFamily, fontNames);
+        }
     });
     return sharedInstance;
 }
@@ -47,10 +59,12 @@
 
 
 - (void) reloadTracks {
-    NSDictionary * trackDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"TrackInfo" ofType:@"plist"]];
+    NSDictionary * trackDictionary = [NSDictionary dictionaryWithContentsOfFile:[[NSBundle mainBundle] pathForResource:KEY_TRACK_INFO_PLIST ofType:@"plist"]];
     if(trackDictionary != nil) {
-        NSArray * tracks = trackDictionary[@"Tracks"];
+        NSArray<NSDictionary*> * tracks = trackDictionary[KEY_TRACK];
+        NSArray<NSDictionary*> * chimeNames = trackDictionary[KEY_CHIME];
         self.meditationTracks = [NSMutableArray arrayWithCapacity:tracks.count];
+        self.chimes = [NSMutableArray arrayWithCapacity:chimeNames.count];
         NSDictionary * individualDict = nil;
         MeditationTrack * medTrack = nil;
         
@@ -71,9 +85,30 @@
                 DLOG_ARGS(@"One key is nil for track %i in %@, %@, %@", i, tempMeditationName, tempFileName, tempDescription );
             }
         }
+        
+        Chime * chime = nil;
+        for(int i = 0; i < chimeNames.count; i++) {
+            individualDict = chimeNames[i];
+            tempFileName = individualDict[KEY_FILENAME];
+            chime = [Chime new];
+            chime.filename = tempFileName;
+            [self.chimes addObject:chime];
+            if(tempFileName == nil) {
+                DLOG_ARGS(@"Could not find chime: %i", i);
+            }
+        }
     } else {
         DLOG(@"Didn't get trackDictionary from path");
     }
+}
+
+- (Chime*) chimeAt:(NSUInteger)chimeIndex;
+{
+    Chime * chime = nil;
+    if(chimeIndex < self.chimes.count) {
+        chime = self.chimes[chimeIndex];
+    }
+    return chime;
 }
 
 - (void) initializeTracks {
@@ -87,11 +122,7 @@
 
 
 - (void) updateTracksArrayForUnlockedStatus {
-//    self.trackFileNames = [[NSMutableArray alloc] initWithArray:@[TRACK_1_NAME]];
-    
-    if( [Settings getDidUnlockTracks] == YES) {
-        [self.trackFileNames addObjectsFromArray:@[UNL_TRACK_1_NAME] ];
-    }
+//    if( [Settings getDidUnlockTracks] == YES) { }
 }
 
 - (void) unloadAllTracks; //To test the load Speed

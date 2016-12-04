@@ -16,9 +16,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSString * htmlString = @"<DOCTYPE! html><html><head><title></title></head><body><h1>This is text h1</h1><p>text</p></body></html>"; //load from file
+    NSError * err;
+    NSString * html = [NSString stringWithContentsOfFile:[[NSBundle mainBundle] pathForResource:@"WakeUpInfoPage_withinapp_" ofType:@"html"] encoding:NSUTF8StringEncoding error:&err];
+     
+//    NSString * htmlString = @"<DOCTYPE! html><html><head><title></title></head><body><h1>This is text h1</h1><p>text</p></body></html>"; //load from file
     
-    [self.theWebView loadHTMLString:htmlString baseURL:nil];
+    [self.theWebView loadHTMLString:html baseURL:nil];
     // Do any additional setup after loading the view.
 }
 

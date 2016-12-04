@@ -15,12 +15,79 @@
 		BD3500791DE50C3000654352 /* DateUtility.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500781DE50C3000654352 /* DateUtility.m */; };
 		BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */ = {isa = PBXBuildFile; fileRef = BD35007D1DE54C3C00654352 /* AlarmController.m */; };
 		BD3500811DE6520300654352 /* MultiSelectView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD3500801DE6520300654352 /* MultiSelectView.m */; };
-		BDABFC551DE73D1700282A04 /* AlarmButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */; };
-		BDABFC561DE73D1800282A04 /* AlarmButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */; };
-		BDABFC571DE73D1800282A04 /* InfoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC511DE73D1700282A04 /* InfoButton@2x.png */; };
-		BDABFC581DE73D1800282A04 /* InfoButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC521DE73D1700282A04 /* InfoButton@3x.png */; };
-		BDABFC591DE73D1800282A04 /* MusicButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC531DE73D1700282A04 /* MusicButton@2x.png */; };
-		BDABFC5A1DE73D1800282A04 /* MusicButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC541DE73D1700282A04 /* MusicButton@3x.png */; };
+		BD38AEC01DF34B9900BA25A3 /* WakeUpInfoPage_withinapp_.html in Resources */ = {isa = PBXBuildFile; fileRef = BD38AEBF1DF34B9900BA25A3 /* WakeUpInfoPage_withinapp_.html */; };
+		BDA294351DEF7933006D5EAE /* Chime.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA294341DEF7933006D5EAE /* Chime.m */; };
+		BDA294371DEF7E7F006D5EAE /* 00 - Alarm Chimes.caf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294361DEF7E7F006D5EAE /* 00 - Alarm Chimes.caf */; };
+		BDA294591DEF8C4F006D5EAE /* Walkway Black RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943A1DEF8C4F006D5EAE /* Walkway Black RevOblique.ttf */; };
+		BDA2945A1DEF8C4F006D5EAE /* Walkway Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943B1DEF8C4F006D5EAE /* Walkway Black.ttf */; };
+		BDA2945B1DEF8C4F006D5EAE /* Walkway Bold RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943C1DEF8C4F006D5EAE /* Walkway Bold RevOblique.ttf */; };
+		BDA2945C1DEF8C4F006D5EAE /* Walkway Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943D1DEF8C4F006D5EAE /* Walkway Bold.ttf */; };
+		BDA2945D1DEF8C4F006D5EAE /* Walkway Condensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943E1DEF8C4F006D5EAE /* Walkway Condensed Bold.ttf */; };
+		BDA2945E1DEF8C4F006D5EAE /* Walkway Condensed SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2943F1DEF8C4F006D5EAE /* Walkway Condensed SemiBold.ttf */; };
+		BDA2945F1DEF8C4F006D5EAE /* Walkway Condensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294401DEF8C4F006D5EAE /* Walkway Condensed.ttf */; };
+		BDA294601DEF8C4F006D5EAE /* Walkway Expand Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294411DEF8C4F006D5EAE /* Walkway Expand Black.ttf */; };
+		BDA294611DEF8C4F006D5EAE /* Walkway Expand Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294421DEF8C4F006D5EAE /* Walkway Expand Bold.ttf */; };
+		BDA294621DEF8C4F006D5EAE /* Walkway Expand RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294431DEF8C4F006D5EAE /* Walkway Expand RevOblique.ttf */; };
+		BDA294631DEF8C4F006D5EAE /* Walkway Expand SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294441DEF8C4F006D5EAE /* Walkway Expand SemiBold.ttf */; };
+		BDA294641DEF8C4F006D5EAE /* Walkway Expand UltraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294451DEF8C4F006D5EAE /* Walkway Expand UltraBold.ttf */; };
+		BDA294651DEF8C4F006D5EAE /* Walkway Expand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294461DEF8C4F006D5EAE /* Walkway Expand.ttf */; };
+		BDA294661DEF8C4F006D5EAE /* Walkway Oblique Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294471DEF8C4F006D5EAE /* Walkway Oblique Black.ttf */; };
+		BDA294671DEF8C4F006D5EAE /* Walkway Oblique Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294481DEF8C4F006D5EAE /* Walkway Oblique Bold.ttf */; };
+		BDA294681DEF8C4F006D5EAE /* Walkway Oblique Expand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294491DEF8C4F006D5EAE /* Walkway Oblique Expand.ttf */; };
+		BDA294691DEF8C4F006D5EAE /* Walkway Oblique SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944A1DEF8C4F006D5EAE /* Walkway Oblique SemiBold.ttf */; };
+		BDA2946A1DEF8C4F006D5EAE /* Walkway Oblique UltraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944B1DEF8C4F006D5EAE /* Walkway Oblique UltraBold.ttf */; };
+		BDA2946B1DEF8C4F006D5EAE /* Walkway Oblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944C1DEF8C4F006D5EAE /* Walkway Oblique.ttf */; };
+		BDA2946C1DEF8C4F006D5EAE /* Walkway RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944D1DEF8C4F006D5EAE /* Walkway RevOblique.ttf */; };
+		BDA2946D1DEF8C4F006D5EAE /* Walkway rounded.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944E1DEF8C4F006D5EAE /* Walkway rounded.ttf */; };
+		BDA2946E1DEF8C4F006D5EAE /* Walkway SemiBold RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA2944F1DEF8C4F006D5EAE /* Walkway SemiBold RevOblique.ttf */; };
+		BDA2946F1DEF8C4F006D5EAE /* Walkway SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294501DEF8C4F006D5EAE /* Walkway SemiBold.ttf */; };
+		BDA294701DEF8C4F006D5EAE /* Walkway UltraBold RevOblique.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294511DEF8C4F006D5EAE /* Walkway UltraBold RevOblique.ttf */; };
+		BDA294711DEF8C4F006D5EAE /* Walkway UltraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294521DEF8C4F006D5EAE /* Walkway UltraBold.ttf */; };
+		BDA294721DEF8C4F006D5EAE /* Walkway UltraCondensed Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294531DEF8C4F006D5EAE /* Walkway UltraCondensed Bold.ttf */; };
+		BDA294731DEF8C4F006D5EAE /* Walkway UltraCondensed Semi.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294541DEF8C4F006D5EAE /* Walkway UltraCondensed Semi.ttf */; };
+		BDA294741DEF8C4F006D5EAE /* Walkway UltraCondensed.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294551DEF8C4F006D5EAE /* Walkway UltraCondensed.ttf */; };
+		BDA294751DEF8C4F006D5EAE /* Walkway UltraExpand Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294561DEF8C4F006D5EAE /* Walkway UltraExpand Bold.ttf */; };
+		BDA294761DEF8C4F006D5EAE /* Walkway UltraExpand SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294571DEF8C4F006D5EAE /* Walkway UltraExpand SemiBold.ttf */; };
+		BDA294771DEF8C4F006D5EAE /* Walkway UltraExpand.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BDA294581DEF8C4F006D5EAE /* Walkway UltraExpand.ttf */; };
+		BDA294791DF085C9006D5EAE /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BDA294781DF085C9006D5EAE /* UserNotifications.framework */; };
+		BDA2947E1DF08FEC006D5EAE /* UILabel+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA2947D1DF08FEC006D5EAE /* UILabel+Layout.m */; };
+		BDA294801DF1D5F0006D5EAE /* 00 - Alarm Chimes.wav in Resources */ = {isa = PBXBuildFile; fileRef = BDA2947F1DF1D5EF006D5EAE /* 00 - Alarm Chimes.wav */; };
+		BDA294831DF20934006D5EAE /* NSObject+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA294821DF20934006D5EAE /* NSObject+Extension.m */; };
+		BDA294871DF21DFD006D5EAE /* AlignedLabel.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA294861DF21DFD006D5EAE /* AlignedLabel.m */; };
+		BDA2948A1DF22BA3006D5EAE /* UIView+Layout.m in Sources */ = {isa = PBXBuildFile; fileRef = BDA294891DF22BA3006D5EAE /* UIView+Layout.m */; };
+		BDA294AF1DF239CC006D5EAE /* AlarmButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2948C1DF239CC006D5EAE /* AlarmButton@2x.png */; };
+		BDA294B01DF239CC006D5EAE /* AlarmButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2948D1DF239CC006D5EAE /* AlarmButton@3x.png */; };
+		BDA294B11DF239CC006D5EAE /* BackButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2948E1DF239CC006D5EAE /* BackButton@2x.png */; };
+		BDA294B21DF239CC006D5EAE /* BackButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2948F1DF239CC006D5EAE /* BackButton@3x.png */; };
+		BDA294B31DF239CC006D5EAE /* ForwardButtonSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294901DF239CC006D5EAE /* ForwardButtonSmall@2x.png */; };
+		BDA294B41DF239CC006D5EAE /* ForwardButtonSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294911DF239CC006D5EAE /* ForwardButtonSmall@3x.png */; };
+		BDA294B51DF239CC006D5EAE /* InfoButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294921DF239CC006D5EAE /* InfoButton@2x.png */; };
+		BDA294B61DF239CC006D5EAE /* InfoButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294931DF239CC006D5EAE /* InfoButton@3x.png */; };
+		BDA294B71DF239CC006D5EAE /* MusicButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294941DF239CC006D5EAE /* MusicButton@2x.png */; };
+		BDA294B81DF239CC006D5EAE /* MusicButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294951DF239CC006D5EAE /* MusicButton@3x.png */; };
+		BDA294B91DF239CC006D5EAE /* PauseButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294961DF239CC006D5EAE /* PauseButton@2x.png */; };
+		BDA294BA1DF239CC006D5EAE /* PauseButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294971DF239CC006D5EAE /* PauseButton@3x.png */; };
+		BDA294BB1DF239CC006D5EAE /* PauseButtonSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294981DF239CC006D5EAE /* PauseButtonSmall@2x.png */; };
+		BDA294BC1DF239CC006D5EAE /* PauseButtonSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294991DF239CC006D5EAE /* PauseButtonSmall@3x.png */; };
+		BDA294BD1DF239CC006D5EAE /* PlayButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949A1DF239CC006D5EAE /* PlayButton@2x.png */; };
+		BDA294BE1DF239CC006D5EAE /* PlayButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949B1DF239CC006D5EAE /* PlayButton@3x.png */; };
+		BDA294BF1DF239CC006D5EAE /* PlayButtonSmall@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949C1DF239CC006D5EAE /* PlayButtonSmall@2x.png */; };
+		BDA294C01DF239CC006D5EAE /* PlayButtonSmall@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949D1DF239CC006D5EAE /* PlayButtonSmall@3x.png */; };
+		BDA294C11DF239CC006D5EAE /* SnoozeButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949E1DF239CC006D5EAE /* SnoozeButton@2x.png */; };
+		BDA294C21DF239CC006D5EAE /* SnoozeButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA2949F1DF239CC006D5EAE /* SnoozeButton@3x.png */; };
+		BDA294C31DF239CC006D5EAE /* StopButton@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A01DF239CC006D5EAE /* StopButton@2x.png */; };
+		BDA294C41DF239CC006D5EAE /* StopButton@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A11DF239CC006D5EAE /* StopButton@3x.png */; };
+		BDA294C51DF239CC006D5EAE /* appIcon1024.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A31DF239CC006D5EAE /* appIcon1024.png */; };
+		BDA294C61DF239CC006D5EAE /* appIcon120.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A41DF239CC006D5EAE /* appIcon120.png */; };
+		BDA294C71DF239CC006D5EAE /* appIcon152.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A51DF239CC006D5EAE /* appIcon152.png */; };
+		BDA294C81DF239CC006D5EAE /* appIcon167.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A61DF239CC006D5EAE /* appIcon167.png */; };
+		BDA294C91DF239CC006D5EAE /* appIcon180.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A71DF239CC006D5EAE /* appIcon180.png */; };
+		BDA294CA1DF239CC006D5EAE /* appIcon58.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A81DF239CC006D5EAE /* appIcon58.png */; };
+		BDA294CB1DF239CC006D5EAE /* appIcon80.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294A91DF239CC006D5EAE /* appIcon80.png */; };
+		BDA294CC1DF239CC006D5EAE /* appIcon87.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294AA1DF239CC006D5EAE /* appIcon87.png */; };
+		BDA294CD1DF239CC006D5EAE /* splash1080.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294AC1DF239CC006D5EAE /* splash1080.png */; };
+		BDA294CE1DF239CC006D5EAE /* splash640.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294AD1DF239CC006D5EAE /* splash640.png */; };
+		BDA294CF1DF239CC006D5EAE /* splash750.png in Resources */ = {isa = PBXBuildFile; fileRef = BDA294AE1DF239CC006D5EAE /* splash750.png */; };
 		BDABFC5D1DE8BC2300282A04 /* AlarmChooseCell.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */; };
 		BDABFC601DE9523600282A04 /* MultiSelectButton.m in Sources */ = {isa = PBXBuildFile; fileRef = BDABFC5F1DE9523600282A04 /* MultiSelectButton.m */; };
 		BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */ = {isa = PBXBuildFile; fileRef = BDABFC611DE9524B00282A04 /* MultiSelectButton.xib */; };
@@ -81,12 +148,84 @@
 		BD35007D1DE54C3C00654352 /* AlarmController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmController.m; sourceTree = "<group>"; };
 		BD35007F1DE6520300654352 /* MultiSelectView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectView.h; sourceTree = "<group>"; };
 		BD3500801DE6520300654352 /* MultiSelectView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MultiSelectView.m; sourceTree = "<group>"; };
-		BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@2x.png"; sourceTree = "<group>"; };
-		BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@3x.png"; sourceTree = "<group>"; };
-		BDABFC511DE73D1700282A04 /* InfoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@2x.png"; sourceTree = "<group>"; };
-		BDABFC521DE73D1700282A04 /* InfoButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@3x.png"; sourceTree = "<group>"; };
-		BDABFC531DE73D1700282A04 /* MusicButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@2x.png"; sourceTree = "<group>"; };
-		BDABFC541DE73D1700282A04 /* MusicButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@3x.png"; sourceTree = "<group>"; };
+		BD38AEBF1DF34B9900BA25A3 /* WakeUpInfoPage_withinapp_.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = WakeUpInfoPage_withinapp_.html; sourceTree = "<group>"; };
+		BDA294331DEF7933006D5EAE /* Chime.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Chime.h; sourceTree = "<group>"; };
+		BDA294341DEF7933006D5EAE /* Chime.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Chime.m; sourceTree = "<group>"; };
+		BDA294361DEF7E7F006D5EAE /* 00 - Alarm Chimes.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "00 - Alarm Chimes.caf"; sourceTree = "<group>"; };
+		BDA2943A1DEF8C4F006D5EAE /* Walkway Black RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Black RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA2943B1DEF8C4F006D5EAE /* Walkway Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Black.ttf"; sourceTree = "<group>"; };
+		BDA2943C1DEF8C4F006D5EAE /* Walkway Bold RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Bold RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA2943D1DEF8C4F006D5EAE /* Walkway Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Bold.ttf"; sourceTree = "<group>"; };
+		BDA2943E1DEF8C4F006D5EAE /* Walkway Condensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Condensed Bold.ttf"; sourceTree = "<group>"; };
+		BDA2943F1DEF8C4F006D5EAE /* Walkway Condensed SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Condensed SemiBold.ttf"; sourceTree = "<group>"; };
+		BDA294401DEF8C4F006D5EAE /* Walkway Condensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Condensed.ttf"; sourceTree = "<group>"; };
+		BDA294411DEF8C4F006D5EAE /* Walkway Expand Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand Black.ttf"; sourceTree = "<group>"; };
+		BDA294421DEF8C4F006D5EAE /* Walkway Expand Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand Bold.ttf"; sourceTree = "<group>"; };
+		BDA294431DEF8C4F006D5EAE /* Walkway Expand RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA294441DEF8C4F006D5EAE /* Walkway Expand SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand SemiBold.ttf"; sourceTree = "<group>"; };
+		BDA294451DEF8C4F006D5EAE /* Walkway Expand UltraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand UltraBold.ttf"; sourceTree = "<group>"; };
+		BDA294461DEF8C4F006D5EAE /* Walkway Expand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Expand.ttf"; sourceTree = "<group>"; };
+		BDA294471DEF8C4F006D5EAE /* Walkway Oblique Black.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique Black.ttf"; sourceTree = "<group>"; };
+		BDA294481DEF8C4F006D5EAE /* Walkway Oblique Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique Bold.ttf"; sourceTree = "<group>"; };
+		BDA294491DEF8C4F006D5EAE /* Walkway Oblique Expand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique Expand.ttf"; sourceTree = "<group>"; };
+		BDA2944A1DEF8C4F006D5EAE /* Walkway Oblique SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique SemiBold.ttf"; sourceTree = "<group>"; };
+		BDA2944B1DEF8C4F006D5EAE /* Walkway Oblique UltraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique UltraBold.ttf"; sourceTree = "<group>"; };
+		BDA2944C1DEF8C4F006D5EAE /* Walkway Oblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway Oblique.ttf"; sourceTree = "<group>"; };
+		BDA2944D1DEF8C4F006D5EAE /* Walkway RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA2944E1DEF8C4F006D5EAE /* Walkway rounded.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway rounded.ttf"; sourceTree = "<group>"; };
+		BDA2944F1DEF8C4F006D5EAE /* Walkway SemiBold RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway SemiBold RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA294501DEF8C4F006D5EAE /* Walkway SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway SemiBold.ttf"; sourceTree = "<group>"; };
+		BDA294511DEF8C4F006D5EAE /* Walkway UltraBold RevOblique.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraBold RevOblique.ttf"; sourceTree = "<group>"; };
+		BDA294521DEF8C4F006D5EAE /* Walkway UltraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraBold.ttf"; sourceTree = "<group>"; };
+		BDA294531DEF8C4F006D5EAE /* Walkway UltraCondensed Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraCondensed Bold.ttf"; sourceTree = "<group>"; };
+		BDA294541DEF8C4F006D5EAE /* Walkway UltraCondensed Semi.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraCondensed Semi.ttf"; sourceTree = "<group>"; };
+		BDA294551DEF8C4F006D5EAE /* Walkway UltraCondensed.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraCondensed.ttf"; sourceTree = "<group>"; };
+		BDA294561DEF8C4F006D5EAE /* Walkway UltraExpand Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraExpand Bold.ttf"; sourceTree = "<group>"; };
+		BDA294571DEF8C4F006D5EAE /* Walkway UltraExpand SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraExpand SemiBold.ttf"; sourceTree = "<group>"; };
+		BDA294581DEF8C4F006D5EAE /* Walkway UltraExpand.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Walkway UltraExpand.ttf"; sourceTree = "<group>"; };
+		BDA294781DF085C9006D5EAE /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		BDA2947C1DF08FEC006D5EAE /* UILabel+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UILabel+Layout.h"; sourceTree = "<group>"; };
+		BDA2947D1DF08FEC006D5EAE /* UILabel+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UILabel+Layout.m"; sourceTree = "<group>"; };
+		BDA2947F1DF1D5EF006D5EAE /* 00 - Alarm Chimes.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = "00 - Alarm Chimes.wav"; sourceTree = "<group>"; };
+		BDA294811DF20934006D5EAE /* NSObject+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+Extension.h"; sourceTree = "<group>"; };
+		BDA294821DF20934006D5EAE /* NSObject+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+Extension.m"; sourceTree = "<group>"; };
+		BDA294851DF21DFD006D5EAE /* AlignedLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlignedLabel.h; sourceTree = "<group>"; };
+		BDA294861DF21DFD006D5EAE /* AlignedLabel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlignedLabel.m; sourceTree = "<group>"; };
+		BDA294881DF22BA3006D5EAE /* UIView+Layout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Layout.h"; sourceTree = "<group>"; };
+		BDA294891DF22BA3006D5EAE /* UIView+Layout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Layout.m"; sourceTree = "<group>"; };
+		BDA2948C1DF239CC006D5EAE /* AlarmButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@2x.png"; sourceTree = "<group>"; };
+		BDA2948D1DF239CC006D5EAE /* AlarmButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "AlarmButton@3x.png"; sourceTree = "<group>"; };
+		BDA2948E1DF239CC006D5EAE /* BackButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackButton@2x.png"; sourceTree = "<group>"; };
+		BDA2948F1DF239CC006D5EAE /* BackButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "BackButton@3x.png"; sourceTree = "<group>"; };
+		BDA294901DF239CC006D5EAE /* ForwardButtonSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ForwardButtonSmall@2x.png"; sourceTree = "<group>"; };
+		BDA294911DF239CC006D5EAE /* ForwardButtonSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ForwardButtonSmall@3x.png"; sourceTree = "<group>"; };
+		BDA294921DF239CC006D5EAE /* InfoButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@2x.png"; sourceTree = "<group>"; };
+		BDA294931DF239CC006D5EAE /* InfoButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "InfoButton@3x.png"; sourceTree = "<group>"; };
+		BDA294941DF239CC006D5EAE /* MusicButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@2x.png"; sourceTree = "<group>"; };
+		BDA294951DF239CC006D5EAE /* MusicButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "MusicButton@3x.png"; sourceTree = "<group>"; };
+		BDA294961DF239CC006D5EAE /* PauseButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButton@2x.png"; sourceTree = "<group>"; };
+		BDA294971DF239CC006D5EAE /* PauseButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButton@3x.png"; sourceTree = "<group>"; };
+		BDA294981DF239CC006D5EAE /* PauseButtonSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButtonSmall@2x.png"; sourceTree = "<group>"; };
+		BDA294991DF239CC006D5EAE /* PauseButtonSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PauseButtonSmall@3x.png"; sourceTree = "<group>"; };
+		BDA2949A1DF239CC006D5EAE /* PlayButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButton@2x.png"; sourceTree = "<group>"; };
+		BDA2949B1DF239CC006D5EAE /* PlayButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButton@3x.png"; sourceTree = "<group>"; };
+		BDA2949C1DF239CC006D5EAE /* PlayButtonSmall@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButtonSmall@2x.png"; sourceTree = "<group>"; };
+		BDA2949D1DF239CC006D5EAE /* PlayButtonSmall@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "PlayButtonSmall@3x.png"; sourceTree = "<group>"; };
+		BDA2949E1DF239CC006D5EAE /* SnoozeButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SnoozeButton@2x.png"; sourceTree = "<group>"; };
+		BDA2949F1DF239CC006D5EAE /* SnoozeButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "SnoozeButton@3x.png"; sourceTree = "<group>"; };
+		BDA294A01DF239CC006D5EAE /* StopButton@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StopButton@2x.png"; sourceTree = "<group>"; };
+		BDA294A11DF239CC006D5EAE /* StopButton@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "StopButton@3x.png"; sourceTree = "<group>"; };
+		BDA294A31DF239CC006D5EAE /* appIcon1024.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon1024.png; sourceTree = "<group>"; };
+		BDA294A41DF239CC006D5EAE /* appIcon120.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon120.png; sourceTree = "<group>"; };
+		BDA294A51DF239CC006D5EAE /* appIcon152.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon152.png; sourceTree = "<group>"; };
+		BDA294A61DF239CC006D5EAE /* appIcon167.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon167.png; sourceTree = "<group>"; };
+		BDA294A71DF239CC006D5EAE /* appIcon180.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon180.png; sourceTree = "<group>"; };
+		BDA294A81DF239CC006D5EAE /* appIcon58.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon58.png; sourceTree = "<group>"; };
+		BDA294A91DF239CC006D5EAE /* appIcon80.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon80.png; sourceTree = "<group>"; };
+		BDA294AA1DF239CC006D5EAE /* appIcon87.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon87.png; sourceTree = "<group>"; };
+		BDA294AC1DF239CC006D5EAE /* splash1080.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash1080.png; sourceTree = "<group>"; };
+		BDA294AD1DF239CC006D5EAE /* splash640.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash640.png; sourceTree = "<group>"; };
+		BDA294AE1DF239CC006D5EAE /* splash750.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = splash750.png; sourceTree = "<group>"; };
 		BDABFC5B1DE8BC2300282A04 /* AlarmChooseCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlarmChooseCell.h; sourceTree = "<group>"; };
 		BDABFC5C1DE8BC2300282A04 /* AlarmChooseCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlarmChooseCell.m; sourceTree = "<group>"; };
 		BDABFC5E1DE9523600282A04 /* MultiSelectButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MultiSelectButton.h; sourceTree = "<group>"; };
@@ -106,7 +245,7 @@
 		BDABFC721DEF5BC000282A04 /* 5 Father I Will Follow.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "5 Father I Will Follow.mp3"; sourceTree = "<group>"; };
 		BDABFC731DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "6 I Love You Now Get Up.mp3"; sourceTree = "<group>"; };
 		BDABFC741DEF5BC000282A04 /* 7 Spiritual Reality.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "7 Spiritual Reality.mp3"; sourceTree = "<group>"; };
-		BDC32F681DE35CEA00C12C81 /* WakeUp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WakeUp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		BDC32F681DE35CEA00C12C81 /* Morning Miracles.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Morning Miracles.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BDC32F6C1DE35CEA00C12C81 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BDC32F6E1DE35CEA00C12C81 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		BDC32F6F1DE35CEA00C12C81 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -154,6 +293,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BDA294791DF085C9006D5EAE /* UserNotifications.framework in Frameworks */,
 				BD3500701DE4D92300654352 /* AVFoundation.framework in Frameworks */,
 				BD35006E1DE4D91D00654352 /* CoreGraphics.framework in Frameworks */,
 			);
@@ -174,6 +314,7 @@
 		BD35006C1DE4D91C00654352 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BDA294781DF085C9006D5EAE /* UserNotifications.framework */,
 				BD35006F1DE4D92300654352 /* AVFoundation.framework */,
 				BD35006D1DE4D91D00654352 /* CoreGraphics.framework */,
 			);
@@ -197,9 +338,141 @@
 			name = Controllers;
 			sourceTree = "<group>";
 		};
+		BDA294381DEF8C4F006D5EAE /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				BDA294391DEF8C4F006D5EAE /* walkway */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		BDA294391DEF8C4F006D5EAE /* walkway */ = {
+			isa = PBXGroup;
+			children = (
+				BDA2943A1DEF8C4F006D5EAE /* Walkway Black RevOblique.ttf */,
+				BDA2943B1DEF8C4F006D5EAE /* Walkway Black.ttf */,
+				BDA2943C1DEF8C4F006D5EAE /* Walkway Bold RevOblique.ttf */,
+				BDA2943D1DEF8C4F006D5EAE /* Walkway Bold.ttf */,
+				BDA2943E1DEF8C4F006D5EAE /* Walkway Condensed Bold.ttf */,
+				BDA2943F1DEF8C4F006D5EAE /* Walkway Condensed SemiBold.ttf */,
+				BDA294401DEF8C4F006D5EAE /* Walkway Condensed.ttf */,
+				BDA294411DEF8C4F006D5EAE /* Walkway Expand Black.ttf */,
+				BDA294421DEF8C4F006D5EAE /* Walkway Expand Bold.ttf */,
+				BDA294431DEF8C4F006D5EAE /* Walkway Expand RevOblique.ttf */,
+				BDA294441DEF8C4F006D5EAE /* Walkway Expand SemiBold.ttf */,
+				BDA294451DEF8C4F006D5EAE /* Walkway Expand UltraBold.ttf */,
+				BDA294461DEF8C4F006D5EAE /* Walkway Expand.ttf */,
+				BDA294471DEF8C4F006D5EAE /* Walkway Oblique Black.ttf */,
+				BDA294481DEF8C4F006D5EAE /* Walkway Oblique Bold.ttf */,
+				BDA294491DEF8C4F006D5EAE /* Walkway Oblique Expand.ttf */,
+				BDA2944A1DEF8C4F006D5EAE /* Walkway Oblique SemiBold.ttf */,
+				BDA2944B1DEF8C4F006D5EAE /* Walkway Oblique UltraBold.ttf */,
+				BDA2944C1DEF8C4F006D5EAE /* Walkway Oblique.ttf */,
+				BDA2944D1DEF8C4F006D5EAE /* Walkway RevOblique.ttf */,
+				BDA2944E1DEF8C4F006D5EAE /* Walkway rounded.ttf */,
+				BDA2944F1DEF8C4F006D5EAE /* Walkway SemiBold RevOblique.ttf */,
+				BDA294501DEF8C4F006D5EAE /* Walkway SemiBold.ttf */,
+				BDA294511DEF8C4F006D5EAE /* Walkway UltraBold RevOblique.ttf */,
+				BDA294521DEF8C4F006D5EAE /* Walkway UltraBold.ttf */,
+				BDA294531DEF8C4F006D5EAE /* Walkway UltraCondensed Bold.ttf */,
+				BDA294541DEF8C4F006D5EAE /* Walkway UltraCondensed Semi.ttf */,
+				BDA294551DEF8C4F006D5EAE /* Walkway UltraCondensed.ttf */,
+				BDA294561DEF8C4F006D5EAE /* Walkway UltraExpand Bold.ttf */,
+				BDA294571DEF8C4F006D5EAE /* Walkway UltraExpand SemiBold.ttf */,
+				BDA294581DEF8C4F006D5EAE /* Walkway UltraExpand.ttf */,
+			);
+			path = walkway;
+			sourceTree = "<group>";
+		};
+		BDA2947A1DF08EA0006D5EAE /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				BDA2947B1DF08EA6006D5EAE /* Views */,
+			);
+			name = Categories;
+			sourceTree = "<group>";
+		};
+		BDA2947B1DF08EA6006D5EAE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				BDA294881DF22BA3006D5EAE /* UIView+Layout.h */,
+				BDA294891DF22BA3006D5EAE /* UIView+Layout.m */,
+				BDA2947C1DF08FEC006D5EAE /* UILabel+Layout.h */,
+				BDA2947D1DF08FEC006D5EAE /* UILabel+Layout.m */,
+				BDA294811DF20934006D5EAE /* NSObject+Extension.h */,
+				BDA294821DF20934006D5EAE /* NSObject+Extension.m */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		BDA294841DF21DC9006D5EAE /* Controls */ = {
+			isa = PBXGroup;
+			children = (
+				BDA294851DF21DFD006D5EAE /* AlignedLabel.h */,
+				BDA294861DF21DFD006D5EAE /* AlignedLabel.m */,
+			);
+			name = Controls;
+			sourceTree = "<group>";
+		};
+		BDA2948B1DF239CC006D5EAE /* buttons */ = {
+			isa = PBXGroup;
+			children = (
+				BDA2948C1DF239CC006D5EAE /* AlarmButton@2x.png */,
+				BDA2948D1DF239CC006D5EAE /* AlarmButton@3x.png */,
+				BDA2948E1DF239CC006D5EAE /* BackButton@2x.png */,
+				BDA2948F1DF239CC006D5EAE /* BackButton@3x.png */,
+				BDA294901DF239CC006D5EAE /* ForwardButtonSmall@2x.png */,
+				BDA294911DF239CC006D5EAE /* ForwardButtonSmall@3x.png */,
+				BDA294921DF239CC006D5EAE /* InfoButton@2x.png */,
+				BDA294931DF239CC006D5EAE /* InfoButton@3x.png */,
+				BDA294941DF239CC006D5EAE /* MusicButton@2x.png */,
+				BDA294951DF239CC006D5EAE /* MusicButton@3x.png */,
+				BDA294961DF239CC006D5EAE /* PauseButton@2x.png */,
+				BDA294971DF239CC006D5EAE /* PauseButton@3x.png */,
+				BDA294981DF239CC006D5EAE /* PauseButtonSmall@2x.png */,
+				BDA294991DF239CC006D5EAE /* PauseButtonSmall@3x.png */,
+				BDA2949A1DF239CC006D5EAE /* PlayButton@2x.png */,
+				BDA2949B1DF239CC006D5EAE /* PlayButton@3x.png */,
+				BDA2949C1DF239CC006D5EAE /* PlayButtonSmall@2x.png */,
+				BDA2949D1DF239CC006D5EAE /* PlayButtonSmall@3x.png */,
+				BDA2949E1DF239CC006D5EAE /* SnoozeButton@2x.png */,
+				BDA2949F1DF239CC006D5EAE /* SnoozeButton@3x.png */,
+				BDA294A01DF239CC006D5EAE /* StopButton@2x.png */,
+				BDA294A11DF239CC006D5EAE /* StopButton@3x.png */,
+			);
+			path = buttons;
+			sourceTree = "<group>";
+		};
+		BDA294A21DF239CC006D5EAE /* icons */ = {
+			isa = PBXGroup;
+			children = (
+				BDA294A31DF239CC006D5EAE /* appIcon1024.png */,
+				BDA294A41DF239CC006D5EAE /* appIcon120.png */,
+				BDA294A51DF239CC006D5EAE /* appIcon152.png */,
+				BDA294A61DF239CC006D5EAE /* appIcon167.png */,
+				BDA294A71DF239CC006D5EAE /* appIcon180.png */,
+				BDA294A81DF239CC006D5EAE /* appIcon58.png */,
+				BDA294A91DF239CC006D5EAE /* appIcon80.png */,
+				BDA294AA1DF239CC006D5EAE /* appIcon87.png */,
+			);
+			path = icons;
+			sourceTree = "<group>";
+		};
+		BDA294AB1DF239CC006D5EAE /* splash screens */ = {
+			isa = PBXGroup;
+			children = (
+				BDA294AC1DF239CC006D5EAE /* splash1080.png */,
+				BDA294AD1DF239CC006D5EAE /* splash640.png */,
+				BDA294AE1DF239CC006D5EAE /* splash750.png */,
+			);
+			path = "splash screens";
+			sourceTree = "<group>";
+		};
 		BDABFC6C1DEF5BC000282A04 /* AlarmSounds */ = {
 			isa = PBXGroup;
 			children = (
+				BDA2947F1DF1D5EF006D5EAE /* 00 - Alarm Chimes.wav */,
+				BDA294361DEF7E7F006D5EAE /* 00 - Alarm Chimes.caf */,
 				BDABFC6D1DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 */,
 				BDABFC6E1DEF5BC000282A04 /* 1 Nothing to Fear.mp3 */,
 				BDABFC6F1DEF5BC000282A04 /* 2 Remember Me.mp3 */,
@@ -225,7 +498,7 @@
 		BDC32F691DE35CEA00C12C81 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				BDC32F681DE35CEA00C12C81 /* WakeUp.app */,
+				BDC32F681DE35CEA00C12C81 /* Morning Miracles.app */,
 				BD3500621DE4B72100654352 /* WakeUpTests.xctest */,
 			);
 			name = Products;
@@ -234,6 +507,7 @@
 		BDC32F6A1DE35CEA00C12C81 /* WakeUp */ = {
 			isa = PBXGroup;
 			children = (
+				BDA2947A1DF08EA0006D5EAE /* Categories */,
 				BD35007B1DE54C1D00654352 /* Controllers */,
 				BDC32FAF1DE3F09600C12C81 /* DataModel */,
 				BDC32FA31DE3851900C12C81 /* Resources */,
@@ -275,6 +549,7 @@
 		BDC32F831DE3629800C12C81 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				BDA294841DF21DC9006D5EAE /* Controls */,
 				BDC32F951DE3680D00C12C81 /* Cells */,
 				BDC32F8C1DE3636200C12C81 /* GradientView.h */,
 				BDC32F8D1DE3636200C12C81 /* GradientView.m */,
@@ -316,6 +591,7 @@
 		BDC32FA31DE3851900C12C81 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				BDA294381DEF8C4F006D5EAE /* Fonts */,
 				BDC32FB31DE3F87500C12C81 /* PList */,
 				BDC32FA41DE3851900C12C81 /* Audio */,
 				BDC32FA61DE3851900C12C81 /* HTML */,
@@ -335,6 +611,7 @@
 		BDC32FA61DE3851900C12C81 /* HTML */ = {
 			isa = PBXGroup;
 			children = (
+				BD38AEBF1DF34B9900BA25A3 /* WakeUpInfoPage_withinapp_.html */,
 			);
 			path = HTML;
 			sourceTree = "<group>";
@@ -342,12 +619,9 @@
 		BDC32FA71DE3851900C12C81 /* Image */ = {
 			isa = PBXGroup;
 			children = (
-				BDABFC4F1DE73D1700282A04 /* AlarmButton@2x.png */,
-				BDABFC501DE73D1700282A04 /* AlarmButton@3x.png */,
-				BDABFC511DE73D1700282A04 /* InfoButton@2x.png */,
-				BDABFC521DE73D1700282A04 /* InfoButton@3x.png */,
-				BDABFC531DE73D1700282A04 /* MusicButton@2x.png */,
-				BDABFC541DE73D1700282A04 /* MusicButton@3x.png */,
+				BDA2948B1DF239CC006D5EAE /* buttons */,
+				BDA294A21DF239CC006D5EAE /* icons */,
+				BDA294AB1DF239CC006D5EAE /* splash screens */,
 			);
 			path = Image;
 			sourceTree = "<group>";
@@ -390,6 +664,8 @@
 				BDC32FB11DE3F0B200C12C81 /* MeditationTrack.m */,
 				BD3500741DE4EE6100654352 /* Alarm.h */,
 				BD3500751DE4EE6100654352 /* Alarm.m */,
+				BDA294331DEF7933006D5EAE /* Chime.h */,
+				BDA294341DEF7933006D5EAE /* Chime.m */,
 			);
 			name = DataModel;
 			sourceTree = "<group>";
@@ -437,7 +713,7 @@
 			);
 			name = WakeUp;
 			productName = WakeUp;
-			productReference = BDC32F681DE35CEA00C12C81 /* WakeUp.app */;
+			productReference = BDC32F681DE35CEA00C12C81 /* Morning Miracles.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -456,6 +732,7 @@
 					};
 					BDC32F671DE35CE900C12C81 = {
 						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = JYPA2R9XWE;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
 							com.apple.BackgroundModes = {
@@ -496,24 +773,85 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BDABFC551DE73D1700282A04 /* AlarmButton@2x.png in Resources */,
+				BDA2946C1DEF8C4F006D5EAE /* Walkway RevOblique.ttf in Resources */,
+				BDA294641DEF8C4F006D5EAE /* Walkway Expand UltraBold.ttf in Resources */,
+				BDA294C21DF239CC006D5EAE /* SnoozeButton@3x.png in Resources */,
+				BDA294C91DF239CC006D5EAE /* appIcon180.png in Resources */,
 				BDABFC621DE9524B00282A04 /* MultiSelectButton.xib in Resources */,
+				BDA2945F1DEF8C4F006D5EAE /* Walkway Condensed.ttf in Resources */,
+				BDA2946D1DEF8C4F006D5EAE /* Walkway rounded.ttf in Resources */,
 				BDABFC771DEF5BC000282A04 /* 2 Remember Me.mp3 in Resources */,
+				BDA294B11DF239CC006D5EAE /* BackButton@2x.png in Resources */,
+				BDA294651DEF8C4F006D5EAE /* Walkway Expand.ttf in Resources */,
 				BDC32F7B1DE35CEA00C12C81 /* LaunchScreen.storyboard in Resources */,
+				BDA294BC1DF239CC006D5EAE /* PauseButtonSmall@3x.png in Resources */,
 				BDABFC7B1DEF5BC000282A04 /* 6 I Love You Now Get Up.mp3 in Resources */,
+				BDA294751DEF8C4F006D5EAE /* Walkway UltraExpand Bold.ttf in Resources */,
+				BDA294C31DF239CC006D5EAE /* StopButton@2x.png in Resources */,
+				BDA294B21DF239CC006D5EAE /* BackButton@3x.png in Resources */,
+				BDA294671DEF8C4F006D5EAE /* Walkway Oblique Bold.ttf in Resources */,
+				BDA294721DEF8C4F006D5EAE /* Walkway UltraCondensed Bold.ttf in Resources */,
+				BDA294B51DF239CC006D5EAE /* InfoButton@2x.png in Resources */,
 				BDABFC791DEF5BC000282A04 /* 4 Day of Gifts.mp3 in Resources */,
+				BDA294B81DF239CC006D5EAE /* MusicButton@3x.png in Resources */,
 				BDC32F781DE35CEA00C12C81 /* Assets.xcassets in Resources */,
 				BDC32FB51DE3F88900C12C81 /* TrackInfo.plist in Resources */,
+				BDA294761DEF8C4F006D5EAE /* Walkway UltraExpand SemiBold.ttf in Resources */,
+				BDA294CE1DF239CC006D5EAE /* splash640.png in Resources */,
+				BD38AEC01DF34B9900BA25A3 /* WakeUpInfoPage_withinapp_.html in Resources */,
+				BDA2946F1DEF8C4F006D5EAE /* Walkway SemiBold.ttf in Resources */,
+				BDA294711DEF8C4F006D5EAE /* Walkway UltraBold.ttf in Resources */,
+				BDA294CB1DF239CC006D5EAE /* appIcon80.png in Resources */,
+				BDA294741DEF8C4F006D5EAE /* Walkway UltraCondensed.ttf in Resources */,
+				BDA294C01DF239CC006D5EAE /* PlayButtonSmall@3x.png in Resources */,
+				BDA294611DEF8C4F006D5EAE /* Walkway Expand Bold.ttf in Resources */,
+				BDA2946B1DEF8C4F006D5EAE /* Walkway Oblique.ttf in Resources */,
 				BDABFC781DEF5BC000282A04 /* 3 Find Inspiration.mp3 in Resources */,
-				BDABFC561DE73D1800282A04 /* AlarmButton@3x.png in Resources */,
+				BDA294C51DF239CC006D5EAE /* appIcon1024.png in Resources */,
 				BDABFC7C1DEF5BC000282A04 /* 7 Spiritual Reality.mp3 in Resources */,
+				BDA294B41DF239CC006D5EAE /* ForwardButtonSmall@3x.png in Resources */,
+				BDA2945D1DEF8C4F006D5EAE /* Walkway Condensed Bold.ttf in Resources */,
+				BDA294631DEF8C4F006D5EAE /* Walkway Expand SemiBold.ttf in Resources */,
+				BDA294CC1DF239CC006D5EAE /* appIcon87.png in Resources */,
+				BDA294C71DF239CC006D5EAE /* appIcon152.png in Resources */,
+				BDA294BE1DF239CC006D5EAE /* PlayButton@3x.png in Resources */,
+				BDA294C11DF239CC006D5EAE /* SnoozeButton@2x.png in Resources */,
+				BDA294BD1DF239CC006D5EAE /* PlayButton@2x.png in Resources */,
+				BDA294B01DF239CC006D5EAE /* AlarmButton@3x.png in Resources */,
 				BDABFC7A1DEF5BC000282A04 /* 5 Father I Will Follow.mp3 in Resources */,
 				BDABFC761DEF5BC000282A04 /* 1 Nothing to Fear.mp3 in Resources */,
+				BDA2945E1DEF8C4F006D5EAE /* Walkway Condensed SemiBold.ttf in Resources */,
+				BDA2946A1DEF8C4F006D5EAE /* Walkway Oblique UltraBold.ttf in Resources */,
+				BDA294731DEF8C4F006D5EAE /* Walkway UltraCondensed Semi.ttf in Resources */,
+				BDA294C61DF239CC006D5EAE /* appIcon120.png in Resources */,
+				BDA294701DEF8C4F006D5EAE /* Walkway UltraBold RevOblique.ttf in Resources */,
+				BDA294BB1DF239CC006D5EAE /* PauseButtonSmall@2x.png in Resources */,
+				BDA294591DEF8C4F006D5EAE /* Walkway Black RevOblique.ttf in Resources */,
 				BDABFC751DEF5BC000282A04 /* 00 - Alarm Chimes.mp3 in Resources */,
-				BDABFC571DE73D1800282A04 /* InfoButton@2x.png in Resources */,
-				BDABFC581DE73D1800282A04 /* InfoButton@3x.png in Resources */,
-				BDABFC5A1DE73D1800282A04 /* MusicButton@3x.png in Resources */,
-				BDABFC591DE73D1800282A04 /* MusicButton@2x.png in Resources */,
+				BDA294BF1DF239CC006D5EAE /* PlayButtonSmall@2x.png in Resources */,
+				BDA294CA1DF239CC006D5EAE /* appIcon58.png in Resources */,
+				BDA294BA1DF239CC006D5EAE /* PauseButton@3x.png in Resources */,
+				BDA294CD1DF239CC006D5EAE /* splash1080.png in Resources */,
+				BDA294771DEF8C4F006D5EAE /* Walkway UltraExpand.ttf in Resources */,
+				BDA294B31DF239CC006D5EAE /* ForwardButtonSmall@2x.png in Resources */,
+				BDA294C81DF239CC006D5EAE /* appIcon167.png in Resources */,
+				BDA294CF1DF239CC006D5EAE /* splash750.png in Resources */,
+				BDA294371DEF7E7F006D5EAE /* 00 - Alarm Chimes.caf in Resources */,
+				BDA294B71DF239CC006D5EAE /* MusicButton@2x.png in Resources */,
+				BDA2945A1DEF8C4F006D5EAE /* Walkway Black.ttf in Resources */,
+				BDA2945B1DEF8C4F006D5EAE /* Walkway Bold RevOblique.ttf in Resources */,
+				BDA294661DEF8C4F006D5EAE /* Walkway Oblique Black.ttf in Resources */,
+				BDA2946E1DEF8C4F006D5EAE /* Walkway SemiBold RevOblique.ttf in Resources */,
+				BDA2945C1DEF8C4F006D5EAE /* Walkway Bold.ttf in Resources */,
+				BDA294C41DF239CC006D5EAE /* StopButton@3x.png in Resources */,
+				BDA294AF1DF239CC006D5EAE /* AlarmButton@2x.png in Resources */,
+				BDA294681DEF8C4F006D5EAE /* Walkway Oblique Expand.ttf in Resources */,
+				BDA294601DEF8C4F006D5EAE /* Walkway Expand Black.ttf in Resources */,
+				BDA294621DEF8C4F006D5EAE /* Walkway Expand RevOblique.ttf in Resources */,
+				BDA294B61DF239CC006D5EAE /* InfoButton@3x.png in Resources */,
+				BDA294801DF1D5F0006D5EAE /* 00 - Alarm Chimes.wav in Resources */,
+				BDA294691DEF8C4F006D5EAE /* Walkway Oblique SemiBold.ttf in Resources */,
+				BDA294B91DF239CC006D5EAE /* PauseButton@2x.png in Resources */,
 				BDC32F761DE35CEA00C12C81 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -535,16 +873,19 @@
 			files = (
 				BD3500811DE6520300654352 /* MultiSelectView.m in Sources */,
 				BDC32F731DE35CEA00C12C81 /* ViewController.m in Sources */,
+				BDA294351DEF7933006D5EAE /* Chime.m in Sources */,
 				BDC32F8B1DE3631B00C12C81 /* AudioMgr.m in Sources */,
 				BDABFC681DEB62D100282A04 /* UserAlertHelper.m in Sources */,
 				BDC32F911DE367EA00C12C81 /* SimpleTrackListTableVC.m in Sources */,
 				BD35007E1DE54C3C00654352 /* AlarmController.m in Sources */,
 				BDC32F9E1DE3697500C12C81 /* AlarmTrackSelectTableVC.m in Sources */,
+				BDA2948A1DF22BA3006D5EAE /* UIView+Layout.m in Sources */,
 				BDABFC5D1DE8BC2300282A04 /* AlarmChooseCell.m in Sources */,
 				BDC32F701DE35CEA00C12C81 /* AppDelegate.m in Sources */,
 				BDC32FAE1DE3EEC300C12C81 /* SimpleListCell.m in Sources */,
 				BDC32F871DE362CA00C12C81 /* Settings.m in Sources */,
 				BDC32FB21DE3F0B200C12C81 /* MeditationTrack.m in Sources */,
+				BDA294871DF21DFD006D5EAE /* AlignedLabel.m in Sources */,
 				BDABFC6B1DEBAE4200282A04 /* AppModeManager.m in Sources */,
 				BD3500791DE50C3000654352 /* DateUtility.m in Sources */,
 				BDC32F9B1DE3693200C12C81 /* WakeUpMakeAlarmVC.m in Sources */,
@@ -552,8 +893,10 @@
 				BDABFC601DE9523600282A04 /* MultiSelectButton.m in Sources */,
 				BDC32F981DE3685200C12C81 /* InfoPageVC.m in Sources */,
 				BDC32FA11DE3809B00C12C81 /* TrackHelper.m in Sources */,
+				BDA294831DF20934006D5EAE /* NSObject+Extension.m in Sources */,
 				BD3500731DE4EE3D00654352 /* AlarmListCell.m in Sources */,
 				BDC32F6D1DE35CEA00C12C81 /* main.m in Sources */,
+				BDA2947E1DF08FEC006D5EAE /* UILabel+Layout.m in Sources */,
 				BDC32F941DE3680500C12C81 /* AlarmListTableVC.m in Sources */,
 				BDABFC651DEB62B400282A04 /* NotificationController.m in Sources */,
 				BD3500761DE4EE6100654352 /* Alarm.m in Sources */,
@@ -706,10 +1049,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = JYPA2R9XWE;
 				INFOPLIST_FILE = WakeUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fightingshadowgames.WakeUp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.livingmiracles.wakeuphappy;
+				PRODUCT_NAME = "Morning Miracles";
 			};
 			name = Debug;
 		};
@@ -717,10 +1063,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				DEVELOPMENT_TEAM = JYPA2R9XWE;
 				INFOPLIST_FILE = WakeUp/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fightingshadowgames.WakeUp;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.livingmiracles.wakeuphappy;
+				PRODUCT_NAME = "Morning Miracles";
 			};
 			name = Release;
 		};

@@ -36,6 +36,11 @@
     return player.duration;
 }
 
+- (AVAudioPlayer*) getCurrentAudioPlayer;
+{
+    return currentAudioPlayer;
+}
+
 - (void) setNextTrack:(NSURL *)fileURL {
     NSError * error;
     AVAudioPlayer * player = [[AVAudioPlayer alloc] initWithContentsOfURL:fileURL error:&error];
@@ -57,25 +62,34 @@
 }
 
 - (void) playTrack {
+    isPaused = NO;
+    isStopped = NO;
     [currentAudioPlayer play];
 }
 
 - (void) pauseCurrentTrack {
+    isPaused = YES;
     [currentAudioPlayer pause];
 }
 
 - (void) stopTrack {
+    isStopped = YES;
+    isPaused = NO;
     [currentAudioPlayer stop];
+    currentAudioPlayer = nil;
 }
 
 - (void) privateInitialization {
-    
+    isPaused = NO;
+    isStopped = NO;
 }
 
 //AVAudioPlayer
 
 - (void)audioPlayerDidFinishPlaying:(AVAudioPlayer *)player successfully:(BOOL)flag {
-    
+    isStopped = YES;
+    currentAudioPlayer = nil;
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"AudioPlayerDidFinish" object:nil];
 }
 
 @end

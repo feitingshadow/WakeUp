@@ -22,6 +22,11 @@
 
 @implementation AlarmTrackSelectTableVC
 
+- (void) viewDidDisappear:(BOOL)animated {
+    [super viewDidDisappear:animated];
+    [[AudioMgr sharedInstance] stopTrack];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     currentSelectedIndex = 0;
@@ -50,15 +55,15 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     AlarmChooseCell *cell = [tableView dequeueReusableCellWithIdentifier:@"AlarmChooserCell" forIndexPath:indexPath];
-    [cell setupWithTrack:[[TrackHelper sharedInstance] trackAt:indexPath.row]];
+    [cell setupWithTrack:[[TrackHelper sharedInstance] trackAt:(int)indexPath.row]];
     return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    [Settings setLastStoredTrackIndex:indexPath.row];
+    [Settings setLastStoredTrackIndex:(int)indexPath.row];
     
     if(indexPath.row != currentSelectedIndex) {
-        currentSelectedIndex = indexPath.row;
+        currentSelectedIndex = (int)indexPath.row;
         AudioMgr * audioMgr = [AudioMgr sharedInstance];
         [audioMgr stopTrack];
         MeditationTrack * medTrack = (MeditationTrack*)[[TrackHelper sharedInstance] getTracks][currentSelectedIndex];

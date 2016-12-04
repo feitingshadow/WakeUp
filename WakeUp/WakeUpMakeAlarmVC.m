@@ -46,6 +46,10 @@
     [self.navigationController popViewControllerAnimated:YES];
 }
 
+- (IBAction)datePickerChanged:(UIDatePicker*)datePicker {
+    self.alarmForEditing.time = datePicker.date;
+}
+
 - (void) setupWithAlarm:(Alarm*) alarm;
 {
     self.alarmForEditing = alarm;
@@ -57,6 +61,7 @@
     self.trackChosen = [[TrackHelper sharedInstance] trackAt:self.alarmForEditing.meditationTrackIndex];
     self.trackTitleLabel.text = self.trackChosen.trackName;
     self.trackDescriptionLabel.text = self.trackChosen.trackDescription;
+    [self.datePicker setDate:self.alarmForEditing.time];
     for (int d = 0; d < DAYS_PER_WEEK; d++) {
         BOOL selected = [self.alarmForEditing getDayOfWeekIsOn:d];
         [self.weekdaySelectView setSelected:selected atIndex:d];

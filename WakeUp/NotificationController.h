@@ -16,8 +16,10 @@
 
 + (void) askForPermissionsWithSuccess:(void (^)(void)) completion failure:(void (^)(NSError*))failure;
 + (void) sheduleNotificationForAlarm:(Alarm*)alarm;
++ (void) sheduleSnoozeForAlarm:(Alarm*)alarm;
 + (void) removeNotificationForAlarm:(Alarm*)alarm;
 + (void) clearAllSeenNotifications;
 + (void) removeAllAlarmNotifications;
++ (void) removeNotificationsWithIdentifier:(NSString*) identifier;
 
 @end

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import "MeditationTrack.h"
+#import "Chime.h"
 
 @interface TrackHelper : NSObject
 {
@@ -19,6 +20,7 @@
 - (NSInteger) getNumberOfTracks;
 - (MeditationTrack*) trackAt:(int)index;
 - (void) updateTracksArrayForUnlockedStatus;
+- (Chime*) chimeAt:(NSUInteger)chimeIndex;
 
 //Test helpers
 - (void) unloadAllTracks; //To test the load Speed
