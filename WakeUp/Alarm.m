@@ -77,13 +77,14 @@
     return [[Alarm alloc] initWithTime:[DateUtility dateWithHour:hr andMinutes:minutes] trackIndex:index];
 }
 
-- (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn; {
+- (void) setDayOfWeek:(int)dayIndex toBeOn:(BOOL)isOn; { //TODO: Fix this to work
     weekdays[dayIndex] = (isOn ? 1 : 0);
-    for(int index = 0; index < DAYS_PER_WEEK; index++) {
-        NSDateComponents * components = [[NSDateComponents alloc] init];
-        components.weekday = 7;
-        components.hour = 7;
-        
+    //for(int index = 0; index < DAYS_PER_WEEK; index++) {
+//        NSDateComponents *components = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:[NSDate date]];
+//    //    NSDateComponents * components = [[NSDateComponents alloc] init];
+//        components.weekday = index;
+//        components.hour = 7;
+    
 //            [[UNUserNotificationCenter currentNotificationCenter] getPendingNotificationRequestsWithCompletionHandler:^(NSArray<UNNotificationRequest *> * _Nonnull requests) {
 //                UNNotificationRequest * req;
 ////                NSDictionary * info;
@@ -97,7 +98,7 @@
 //                    }
 //                }
 //            }];
-    }
+  //  }
 }
 
 + (NSString*) snoozingIdentifier; {

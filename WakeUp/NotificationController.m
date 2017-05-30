@@ -57,27 +57,42 @@
  
 }
 
-+ (void) scheduleNotificationAtDate:(NSDate*)date withBody:(NSString*)body title:(NSString*)title id:(NSString*)uniqueId soundName:(NSString*)soundName repeating:(BOOL)repeat {
-    if(date == nil) {
-        int x = 5;
-        x = x + x;
-    }
-    NSDateComponents *alarmComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitWeekOfYear fromDate:date];
-    if(alarmComponents == nil) {
-        int x = 5;
-        x = x + x;
-    }
-    UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:(60 * 60 * 24 * 7) repeats:YES];
-//    UNCalendarNotificationTrigger * calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:alarmComponents repeats:repeat];
-    if(trigger == nil) {
-        int x = 5;
-        x = x + x;
-    }
++ (void) scheduleNotificationAtDate:(NSDateComponents*)dateComponents withBody:(NSString*)body title:(NSString*)title id:(NSString*)uniqueId soundName:(NSString*)soundName repeating:(BOOL)repeat {
+   // if(date == nil) {
+    //    int x = 5;
+    //    x = x + x;
+   // }
+  //  NSDateComponents *alarmComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitYear | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute| NSCalendarUnitSecond | NSCalendarUnitWeekday fromDate:date];
+//    if(alarmComponents == nil) {
+//        int x = 5;
+//        x = x + x;
+//    }
+    
+//    let n = 7
+//    let nextTriggerDate = Calendar.current.date(byAdding: .day, value: n, to: Date())!
+//    let comps = Calendar.current.dateComponents([.year, .month, .day], from: nextTriggerDate)
+//    
+//    let trigger = UNCalendarNotificationTrigger(dateMatching: comps, repeats: false)
+//    print(trigger.nextTriggerDate())
+    
+//    NSDate * d = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitDay value:dateComponents.day toDate:[NSDate date] options:NSCalendarMatchFirst];
+    NSDateComponents* dateC = [[NSDateComponents alloc] init];
+    dateC.hour = dateComponents.hour;
+    dateC.minute = dateComponents.minute;
+    dateC.weekday = dateComponents.weekday;
+    
+    UNCalendarNotificationTrigger * tri = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateC repeats:YES];
+    //UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:(60 * 60 * 24 * 7) repeats:YES];
+   // UNCalendarNotificationTrigger * calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:repeat];
+//    if(trigger == nil) {
+//        int x = 5;
+//        x = x + x;
+//    }
     UNMutableNotificationContent * content = [UNMutableNotificationContent new];
     content.body = body;
     content.title = title;
     content.sound = [UNNotificationSound soundNamed:soundName];
-    UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:uniqueId content:content trigger:trigger];
+    UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:uniqueId content:content trigger:tri];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
         
     }];
@@ -109,6 +124,12 @@
             
             NSDate *now = [NSDate date];
             NSDateComponents *componentsForFireDate = [calendar components:(NSCalendarUnitYear | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute| NSCalendarUnitSecond | NSCalendarUnitWeekday) fromDate: alarm.time];
+            NSDateComponents *genericComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:now];
+
+            [componentsForFireDate setYear:genericComponents.year];
+            [componentsForFireDate setWeekOfYear:genericComponents.weekOfYear];
+            [componentsForFireDate setDay:genericComponents.day];
+            [componentsForFireDate setMonth:genericComponents.month];
             [componentsForFireDate setCalendar:calendar];
 //            [componentsForFireDate setTimeZone:[NSTimeZone defaultTimeZone]];
             [componentsForFireDate setWeekday: i+1];
@@ -119,7 +140,7 @@
             alarm.time = [calendar dateFromComponents:componentsForFireDate];
 //            alarm.time = [componentsForFireDate date];
             mt = [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex];
-            [NotificationController scheduleNotificationAtDate:alarm.time withBody:[NSString stringWithFormat:@"Wake Up To: %@", mt.trackName] title:@"Wake Up!" id:alarm.uuid soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:YES];
+            [NotificationController scheduleNotificationAtDate:componentsForFireDate withBody:[NSString stringWithFormat:@"Wake Up To: %@", mt.trackName] title:@"Wake Up!" id:alarm.uuid soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:YES];
         }
     }
 //    [NotificationController scheduleNotificationAtDate:alarm.time withBody:[NSString stringWithFormat:@"Wake Up To: %@", mt.trackName] title:@"Wake Up!" id:alarm.uuid soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:YES];
