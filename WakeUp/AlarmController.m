@@ -37,7 +37,7 @@
 - (Alarm*) getAlarmWithUuid:(NSString*)uuid;
 {
     for(Alarm * a in self.alarms) {
-        if(a.uuid == uuid) {
+        if([a.uuid isEqualToString:uuid]) {
             return a;
         }
     }

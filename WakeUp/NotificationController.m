@@ -28,6 +28,7 @@
     dispatch_once(&onceToken, ^{
         sharedInstance = [[NotificationController alloc] init];
         [NotificationController askForPermissionsWithSuccess:nil failure:nil];
+        [UNUserNotificationCenter currentNotificationCenter].delegate = sharedInstance;
     });
     return sharedInstance;
 }
@@ -77,11 +78,12 @@
     
 //    NSDate * d = [[NSCalendar currentCalendar] dateByAddingUnit:NSCalendarUnitDay value:dateComponents.day toDate:[NSDate date] options:NSCalendarMatchFirst];
     NSDateComponents* dateC = [[NSDateComponents alloc] init];
+    dateC.calendar = [NSCalendar calendarWithIdentifier:NSCalendarIdentifierGregorian];
     dateC.hour = dateComponents.hour;
     dateC.minute = dateComponents.minute;
     dateC.weekday = dateComponents.weekday;
     
-    UNCalendarNotificationTrigger * tri = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateC repeats:YES];
+    UNCalendarNotificationTrigger * tri = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:YES];
     //UNTimeIntervalNotificationTrigger * trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:(60 * 60 * 24 * 7) repeats:YES];
    // UNCalendarNotificationTrigger * calendarTrigger = [UNCalendarNotificationTrigger triggerWithDateMatchingComponents:dateComponents repeats:repeat];
 //    if(trigger == nil) {
@@ -94,14 +96,15 @@
     content.sound = [UNNotificationSound soundNamed:soundName];
     UNNotificationRequest * request = [UNNotificationRequest requestWithIdentifier:uniqueId content:content trigger:tri];
     [[UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
-        
+        NSLog(@"%@", error);
     }];
 }
 
+//Finish implementing this later.
 + (void) sheduleSnoozeForAlarm:(Alarm*)alarm;
 {
     MeditationTrack * mt = [[TrackHelper sharedInstance] trackAt:alarm.meditationTrackIndex];
-
+    NSDateComponents * components = [[NSDateComponents alloc] init];
     [NotificationController scheduleNotificationAtDate:[NSDate dateWithTimeIntervalSinceNow:FIVE_MINUTES] withBody:[NSString stringWithFormat:@"Snooze Alarm: %@", mt.trackName] title:@"Snooze" id:[Alarm snoozingIdentifier] soundName:[[TrackHelper sharedInstance] chimeAt:0].filename repeating:NO];
 }
 
@@ -124,7 +127,7 @@
             
             NSDate *now = [NSDate date];
             NSDateComponents *componentsForFireDate = [calendar components:(NSCalendarUnitYear | NSCalendarUnitWeekOfYear |  NSCalendarUnitHour | NSCalendarUnitMinute| NSCalendarUnitSecond | NSCalendarUnitWeekday) fromDate: alarm.time];
-            NSDateComponents *genericComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear fromDate:now];
+            NSDateComponents *genericComponents = [[NSCalendar currentCalendar] components:NSCalendarUnitDay | NSCalendarUnitMonth | NSCalendarUnitYear | NSCalendarUnitWeekday fromDate:now];
 
             [componentsForFireDate setYear:genericComponents.year];
             [componentsForFireDate setWeekOfYear:genericComponents.weekOfYear];
@@ -132,7 +135,7 @@
             [componentsForFireDate setMonth:genericComponents.month];
             [componentsForFireDate setCalendar:calendar];
 //            [componentsForFireDate setTimeZone:[NSTimeZone defaultTimeZone]];
-            [componentsForFireDate setWeekday: i+1];
+            [componentsForFireDate setWeekday:i+1]; //undo for production
             [componentsForFireDate setHour: alarmComponents.hour];
             [componentsForFireDate setMinute: alarmComponents.minute];
             [componentsForFireDate setSecond:0];
@@ -166,9 +169,10 @@
 }
 
 //Called after the user taps the notification from the center, either cancel or diving-in to app.
-- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler {
+- (void) userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)(void))completionHandler {
     if(response.actionIdentifier == UNNotificationDismissActionIdentifier) {
         //User chose to do nothing. Don't schedule any alarms.
+        [self sendAlarmIDToPlay:response.notification.request.identifier];
     } else if(response.actionIdentifier == UNNotificationDefaultActionIdentifier) {
         [self sendAlarmIDToPlay:response.notification.request.identifier];
     }

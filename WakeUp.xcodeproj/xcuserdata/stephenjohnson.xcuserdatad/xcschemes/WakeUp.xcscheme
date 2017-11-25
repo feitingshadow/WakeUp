@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "BDC32F671DE35CE900C12C81"
-               BuildableName = "WakeUp.app"
+               BuildableName = "Morning Miracles.app"
                BlueprintName = "WakeUp"
                ReferencedContainer = "container:WakeUp.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC32F671DE35CE900C12C81"
-            BuildableName = "WakeUp.app"
+            BuildableName = "Morning Miracles.app"
             BlueprintName = "WakeUp"
             ReferencedContainer = "container:WakeUp.xcodeproj">
          </BuildableReference>
@@ -66,7 +66,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC32F671DE35CE900C12C81"
-            BuildableName = "WakeUp.app"
+            BuildableName = "Morning Miracles.app"
             BlueprintName = "WakeUp"
             ReferencedContainer = "container:WakeUp.xcodeproj">
          </BuildableReference>
@@ -92,7 +92,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "BDC32F671DE35CE900C12C81"
-            BuildableName = "WakeUp.app"
+            BuildableName = "Morning Miracles.app"
             BlueprintName = "WakeUp"
             ReferencedContainer = "container:WakeUp.xcodeproj">
          </BuildableReference>
